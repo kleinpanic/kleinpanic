@@ -47,7 +47,7 @@
 
 ---
 
-# 👋 Introduction
+# Introduction 👋
 
 Welcome to my **corner of the internet**! I go by **Kleinpanic**, a systems tinkerer, developer, and relentless problem solver. My projects range from **low-level system utilities** to **web applications**, and I love diving into both **security** and **efficiency** challenges.
 
@@ -55,7 +55,7 @@ Welcome to my **corner of the internet**! I go by **Kleinpanic**, a systems tink
   
   <summary><h3>📝Read More</h3></summary>
 
-## 🎯 **What I Do**
+## **What I Do** 🎯
 
 I specialize in blending creativity with **technical expertise** to craft solutions that **solve real-world problems**. From **network security** to **DevOps automation** and everything in between, I push boundaries and continuously evolve my skillset.
 
