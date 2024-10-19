@@ -16,7 +16,7 @@
 
 <h1 align="center">Table Of Contents</h1>
 
-1. [Introduction](#-👋-introduction)
+1. [Introduction](#👋-introduction)
 2. [KleinPanic Website](#kleinpanic-website)
     - [Website Status](#website-status)
     - [Overview of website](#overview-of-website)
