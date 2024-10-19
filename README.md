@@ -16,34 +16,34 @@
 
 <h1 align="center">Table Of Contents</h1>
 
-1. [Introduction](#introduction)
-2. [🌐 KleinPanic Website](#🌐-kleinpanic-website)
+1. [Introduction](#Introduction)
+2. [KleinPanic Website](#kleinpanic-website)
     - [Website Status](#website-status)
     - [Overview of website](#overview-of-website)
     - [Unique aspects](#unique-aspects)
         - [Curling Ip Address](#curling-ip-address)
         - [Curling All Projects](#curling-all-projects)
-3. [📂 Current Projects](#📂-current-projects)
-    - [🔥 Development in Progress](#🔥-development-in-progress)
-    - [✅ Completed Projects](#✅-completed-projects)
-    - [📅 Planned Projects](#📅-planned-projects)
-    - [📈 Summary of Current Project Progress](#📈-summary-of-current-project-progress)
-4. [🛠️ Klein Projects](#🛠️-klein-projects)
+3. [Current Projects](#current-projects)
+    - [Development in Progress](#development-in-progress)
+    - [Completed Projects](#completed-projects)
+    - [Planned Projects](#planned-projects)
+    - [Summary of Current Project Progress](#summary-of-current-project-progress)
+4. [Klein Projects](#klein-projects)
     - [Badge Examples](#badge-examples)
     - [License Examples](#license-examples)
     - [Language Examples](#language-examples)
     - [How to Get the Complete List of Projects](#how-to-get-the-complete-list-of-projects)
     - [Table Status](#table-status)
-5. [⚙️ My Arsenal](#⚙️-my-arsenal)
-    - [🚀 Languages I Speak](#🚀-languages-i-speak)
-    - [🔧 Frameworks, Tools, and Utilities](#🔧-frameworks-tools-and-utilities)
-    - [🛠 DevOps & SysAdmin Stack](#🛠-devops--sysadmin-stack)
-    - [🔥 Security, Pen-Testing, and Network Analysis](#🔥-security-pen-testing-and-network-analysis)
-    - [🌐 Cloud and Web Services](#🌐-cloud-and-web-services)
-    - [🛡 Additional Tools & Techniques](#🛡-additional-tools--techniques)
-6. [🏆 Achievements](#🏆-achievements)
-7. [🤝 How to Contribute](#🤝-how-to-contribute)
-8. [📅 Changelog](#📅-changelog)
+6. [⚙️ My Arsenal](#⚙️-my-arsenal)
+    - [Languages I Speak](#languages-i-speak)
+    - [Frameworks, Tools, and Utilities](#frameworks-tools-and-utilities)
+    - [DevOps & SysAdmin Stack](#devops--sysadmin-stack)
+    - [Security, Pen-Testing, and Network Analysis](#security-pen-testing-and-network-analysis)
+    - [Cloud and Web Services](#cloud-and-web-services)
+    - [Additional Tools & Techniques](#additional-tools--techniques)
+7. [Achievements](#achievements)
+8. [How to Contribute](#how-to-contribute)
+9. [Changelog](#changelog)
 
 ---
 
@@ -134,7 +134,7 @@ Last updated: Sat, 19 Oct 2024 19:55:12 GMT
 
 Here's a snapshot of some of my active and completed projects. Each project is accompanied by its **main language**, **progress status**, and **development notes**. You can track each project's progress and dive into further details as needed.
 
-### 🔥 **Development in Progress**
+## 🔥 **Development in Progress**
 These are the projects currently under active development. Keep an eye on these as I roll out updates and new features.
 
 <details>
@@ -181,14 +181,14 @@ These are the projects currently under active development. Keep an eye on these 
       - 📅 **Upcoming**: Implement Fair Value Gap (FVG) detection and trade filtering.
       - 🛠 **In Progress**: Fine-tuning alerts and signal generation.
 
-  #### Progress:
+  ### Progress:
   ```
   Progress: █████████░░░░░░ 50%
   ```
 
 </details>
 
-### ✅ **Completed Projects**
+## ✅ **Completed Projects**
 These projects are fully functional and open for review, use, and contribution.
 
 <details>
@@ -201,7 +201,7 @@ These projects are fully functional and open for review, use, and contribution.
       - 📦 **Automated**: Install and configure scripts for a new system environment.
       - 🎉 **Completed**: Simplified configuration management for Debian-based systems.
   
-  #### Progress:
+  ### Progress:
   ```
   Progress: ███████████████ 100%
   ```
@@ -218,7 +218,7 @@ These projects are fully functional and open for review, use, and contribution.
       - 🖥️ **Completed**: Full deployment with Docker and systemd service files.
       - 🔒 **Secured**: HTTPS enabled using Let's Encrypt SSL.
 
-  #### Progress: 
+  ### Progress: 
   ```
   Progress: ███████████████ 100%
   ```
@@ -238,7 +238,7 @@ These are the projects that are in the pipeline, waiting for a dedicated time sl
 
 </details>
 
-### 📈 Summary of Current Project Progress:
+## 📈 Summary of Current Project Progress:
 #### Overall Progress:
 ```
 Total Projects: 5 | Completed: 2 | In Progress: 3
@@ -468,7 +468,7 @@ For automation, deployment, and management of my systems and servers:
 - **Nginx**: Handling web traffic and reverse proxying.  
   ![Nginx](https://img.shields.io/badge/web%20server-Nginx-lightblue)
 
-### 🔥 **Security, Pen-Testing, and Network Analysis**
+## 🔥 **Security, Pen-Testing, and Network Analysis**
 I’m well-versed in security tools and have experience in various penetration testing techniques:
 
 - **Nmap**: Network scanning and discovery for identifying open ports and vulnerabilities.  
@@ -485,7 +485,7 @@ I’m well-versed in security tools and have experience in various penetration t
 - **OpenSSH**: For secure, encrypted remote access to my systems.  
   ![OpenSSH](https://img.shields.io/badge/security-OpenSSH-black)
 
-### 🌐 **Cloud and Web Services**
+## 🌐 **Cloud and Web Services**
 Whether deploying apps or hosting websites, these are my trusted cloud and web platforms:
 
 - **GitHub**: Where all my open-source contributions and personal projects live.  
