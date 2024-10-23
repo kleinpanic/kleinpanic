@@ -138,52 +138,86 @@ Here's a snapshot of some of my active and completed projects. Each project is a
 These are the projects currently under active development. Keep an eye on these as I roll out updates and new features.
 
 <details>
-  <summary><h3>🚀 Project 1: **Dynamic Window Manager (DWM) Customization**</h3></summary>
+  <summary><h3>🚀 Project 1: **TI84-Emulator**</h3></summary>
 
-  - **Primary Language**: ![Language](https://img.shields.io/badge/language-C-blue)
+  - **Primary Language**: ![Language](https://img.shields.io/badge/language-C++-blue)
   - **Status**: ![Status](https://img.shields.io/badge/status-in_progress-yellow)
-  - **Description**: Customizing DWM for Raspberry Pi and AARCH64 platforms, implementing dynamic system utilities and visual enhancements.
+  - **Description**: Creating an emulator for the TI-84 calculator with a focus on high-fidelity emulation and UI optimization. Aiming to support core calculator functions and enable custom ROM uploads.
   - **Development Notes**: 
-      - 📅 **Upcoming**: Improve window resizing functions.
-      - 🛠 **Work In Progress**: Testing status bars and icon integration.
+      - 📅 **Upcoming**: Implement graphing functionalities.
+      - 🛠 **Work In Progress**: Finalizing core arithmetic operations and memory management.
 
   #### Progress: 
   ```
-  Progress: ███████████░░░░░░ 60%
+  Progress: ███████░░░░░░░ 40%
   ```
 
 </details>
 
 <details>
-  <summary><h3>💡 Project 2: **Screen Recorder with Tkinter**</h3></summary>
+  <summary><h3>💡 Project 2: **bat0daemon**</h3></summary>
+
+  - **Primary Language**: ![Language](https://img.shields.io/badge/language-Bash-green)
+  - **Status**: ![Status](https://img.shields.io/badge/status-in_progress-yellow)
+  - **Description**: Developing a background daemon to monitor battery status and send notifications for Linux systems. Designed for minimal resource usage with customizable alert levels.
+  - **Development Notes**:
+    - 🔧 **Completed**: Basic battery level detection and notification logic.
+    - 📅 **Upcoming**: Add configurable thresholds and power-saving mode triggers.
+
+  #### Progress: 
+  ```
+  Progress: █████████████░ 80%
+  ```
+
+</details>
+
+<details>
+  <summary><h3>🖥️ Project 3: **board-selection**</h3></summary>
 
   - **Primary Language**: ![Language](https://img.shields.io/badge/language-Python-blue)
   - **Status**: ![Status](https://img.shields.io/badge/status-in_progress-yellow)
-  - **Description**: Building a minimalistic screen recorder interface using Tkinter, focused on performance and user simplicity.
-  - **Development Notes**:
-    - 🔧 **Completed**: Basic recording setup and video capture features.
-    - 📅 **Upcoming**: Adding microphone input and customizable recording dimensions.
+  - **Description**: Building a Python tool to assist with selecting the best microcontroller board based on user-specified criteria (price, features, compatibility).
+  - **Development Notes**: 
+      - 📅 **Upcoming**: Expand database to include more boards.
+      - 🛠 **In Progress**: Fine-tuning comparison algorithms and data structure improvements.
 
-  #### Progress: 
+  #### Progress:
   ```
-  Progress: ████████████░░░░ 70%
+  Progress: ██████████░░░░ 60%
   ```
 
 </details>
 
 <details>
-  <summary><h3>🖥️ Project 3: **Trading Algorithm on Pine Script**</h3></summary>
+  <summary><h3>📊 Project 4: **serial-plotter**</h3></summary>
 
-  - **Primary Language**: ![Language](https://img.shields.io/badge/language-PineScript-brightgreen)
+  - **Primary Language**: ![Language](https://img.shields.io/badge/language-Python-blue)
   - **Status**: ![Status](https://img.shields.io/badge/status-in_progress-yellow)
-  - **Description**: Developing trading algorithms for order flow and chart pattern detection in TradingView.
+  - **Description**: Creating a real-time serial data plotter to visualize incoming data from microcontrollers and sensors. Targeting live updates and customizable plotting options.
   - **Development Notes**: 
-      - 📅 **Upcoming**: Implement Fair Value Gap (FVG) detection and trade filtering.
-      - 🛠 **In Progress**: Fine-tuning alerts and signal generation.
+      - 📅 **Upcoming**: Add support for multi-channel data plotting.
+      - 🛠 **Work In Progress**: Parsing incoming data efficiently and setting up basic plotting functionality.
 
-  ### Progress:
+  #### Progress: 
   ```
-  Progress: █████████░░░░░░ 50%
+  Progress: █████░░░░░░░░ 30%
+  ```
+
+</details>
+
+<details>
+  <summary><h3>🔍 Project 5: **code_analyzer**</h3></summary>
+
+  - **Primary Language**: ![Language](https://img.shields.io/badge/language-Python-blue)
+  - **Status**: ![Status](https://img.shields.io/badge/status-in_progress-yellow)
+  - **Description**: Developing a static code analysis tool to check for coding standards, syntax errors, and optimize performance bottlenecks. Aiming to include support for multiple languages.
+  - **Development Notes**:
+    - 📅 **Upcoming**: Integrate support for additional programming languages.
+    - 🛠 **Work In Progress**: Currently refining Python code analysis module.
+
+  #### Progress: 
+  ```
+  Progress: ████░░░░░░░░░ 35%
   ```
 
 </details>
@@ -192,65 +226,54 @@ These are the projects currently under active development. Keep an eye on these 
 These projects are fully functional and open for review, use, and contribution.
 
 <details>
-  <summary><h3>🎉 Project 4: **Dotfiles and Automation Setup**</h3></summary>
-
-  - **Primary Language**: ![Language](https://img.shields.io/badge/language-Bash-green)
-  - **Status**: ![Status](https://img.shields.io/badge/status-completed-brightgreen)
-  - **Description**: Managing dotfiles and custom scripts for automating system setup, including DWM, Neovim, and other essential Linux utilities.
-  - **Development Notes**: 
-      - 📦 **Automated**: Install and configure scripts for a new system environment.
-      - 🎉 **Completed**: Simplified configuration management for Debian-based systems.
-  
-  ### Progress:
-  ```
-  Progress: ███████████████ 100%
-  ```
-
-</details>
-
-<details>
-  <summary><h3>🎉 Project 5: **Flask Website Deployment**</h3></summary>
+  <summary><h3>🎉 Project 6: **yt-dlpw**</h3></summary>
 
   - **Primary Language**: ![Language](https://img.shields.io/badge/language-Python-blue)
   - **Status**: ![Status](https://img.shields.io/badge/status-completed-brightgreen)
-  - **Description**: Built and deployed a Flask-based portfolio website with SSL support and Nginx integration.
+  - **Description**: A custom wrapper for `yt-dlp` that simplifies downloading YouTube videos with custom options and presets for audio and video formats.
   - **Development Notes**: 
-      - 🖥️ **Completed**: Full deployment with Docker and systemd service files.
-      - 🔒 **Secured**: HTTPS enabled using Let's Encrypt SSL.
-
-  ### Progress: 
+      - 🖥️ **Completed**: Full integration with custom CLI options.
+      - 📦 **Completed**: Packaged and ready for public use.
+  
+  #### Progress: 
   ```
   Progress: ███████████████ 100%
   ```
 
 </details>
 
-## 📅 Planned Projects
-
-These are the projects that are in the pipeline, waiting for a dedicated time slot to start development.
-
 <details>
-  <summary><h3>📝 Project 6: **Linux Performance Monitor**</h3></summary>
+  <summary><h3>🎉 Project 7: **file-transfer-website**</h3></summary>
 
-  - **Planned Language**: ![Language](https://img.shields.io/badge/language-C-blue)
-  - **Status**: ![Status](https://img.shields.io/badge/status-planned-lightgrey)
-  - **Description**: Developing a real-time performance monitor for Linux systems using C and ncurses, aiming for a lightweight alternative to existing tools.
+  - **Primary Language**: ![Language](https://img.shields.io/badge/language-JavaScript-yellow)
+  - **Status**: ![Status](https://img.shields.io/badge/status-completed-brightgreen)
+  - **Description**: Built a secure file transfer website using Node.js and Express, allowing users to upload and share files with encryption.
+  - **Development Notes**: 
+      - 🔐 **Completed**: Secure file transfer implemented with end-to-end encryption.
+      - 🖥️ **Deployed**: Fully deployed on a cloud platform.
+  
+  #### Progress: 
+  ```
+  Progress: ███████████████ 100%
+  ```
 
 </details>
 
 ## 📈 Summary of Current Project Progress:
 #### Overall Progress:
 ```
-Total Projects: 5 | Completed: 2 | In Progress: 3
+Total Projects: 7 | Completed: 2 | In Progress: 5
 ```
 
-| Project Name                | Status                  | Progress  |
-| --------------------------- | ----------------------- | --------- |
-| Dynamic Window Manager (DWM) | ![Status](https://img.shields.io/badge/status-in_progress-yellow) | 60%       |
-| Screen Recorder              | ![Status](https://img.shields.io/badge/status-in_progress-yellow) | 70%       |
-| Trading Algorithm            | ![Status](https://img.shields.io/badge/status-in_progress-yellow) | 50%       |
-| Dotfiles & Automation        | ![Status](https://img.shields.io/badge/status-completed-brightgreen) | 100%      |
-| Flask Website Deployment     | ![Status](https://img.shields.io/badge/status-completed-brightgreen) | 100%      |
+| Project Name          | Status                  | Progress  |
+| --------------------- | ----------------------- | --------- |
+| TI84-Emulator         | ![Status](https://img.shields.io/badge/status-in_progress-yellow) | 40%       |
+| bat0daemon            | ![Status](https://img.shields.io/badge/status-in_progress-yellow) | 80%       |
+| board-selection       | ![Status](https://img.shields.io/badge/status-in_progress-yellow) | 60%       |
+| serial-plotter        | ![Status](https://img.shields.io/badge/status-in_progress-yellow) | 30%       |
+| code_analyzer         | ![Status](https://img.shields.io/badge/status-in_progress-yellow) | 35%       |
+| yt-dlpw               | ![Status](https://img.shields.io/badge/status-completed-brightgreen) | 100%      |
+| file-transfer-website | ![Status](https://img.shields.io/badge/status-completed-brightgreen) | 100%      |
 
 ---
 
@@ -312,7 +335,7 @@ For a complete and automated list of my projects, you can either:
 #### Table Progress
 
 ```plaintext
-| Progress: ███████████▒▒▒▒▒▒ 75% (50/66 Projects Complete) |
+| Progress: ███████████▒▒▒▒▒▒ 78% (60/77 Projects Complete) |
 ```
 <details>
   
@@ -371,8 +394,7 @@ For a complete and automated list of my projects, you can either:
 | simulation_labs           | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/simulation_labs)           | ![License](https://img.shields.io/github/license/kleinpanic/simulation_labs)           | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/simulation_labs.svg?branch=main)              | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/simulation_labs/badge.svg?branch=main) |
 | spotify_dl                | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/spotify_dl)                | ![License](https://img.shields.io/github/license/kleinpanic/spotify_dl)                | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/spotify_dl.svg?branch=main)                   | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/spotify_dl/badge.svg?branch=main) |
 | ssh_gui                   | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/ssh_gui)                   | ![License](https://img.shields.io/github/license/kleinpanic/ssh_gui)                   | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/ssh_gui.svg?branch=main)                      | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/ssh_gui/badge.svg?branch=main) |
-| stepbomb                  | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/stepbomb)                  | ![License](https://img.shields.io/github/license/kleinpanic/stepbomb)                  | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/stepbomb.svg?branch=main)                     | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/stepbomb/badge.svg?branch=main) |
-| switch_tags               | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/switch_tags)               | ![License](https://img.shields.io/github/license/kleinpanic/switch_tags)               | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/switch_tags.svg?branch=main)                  | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/switch_tags/badge.svg?branch=main) |
+| stepbomb                  | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/stepbomb)                  | ![License](https://img.shields.io/github/license/kleinpanic/stepbomb)                  | ![Status](https://img.shields.io/badge/status-completed-brightgreen) | ![Build Status](https://travis-ci.org/kleinpanic/stepbomb.svg?branch=main)                     | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/stepbomb/badge.svg?branch=main) |
 | SystemD                   | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/SystemD)                   | ![License](https://img.shields.io/github/license/kleinpanic/SystemD)                   | ![Status](https://img.shields.io/badge/status-completed-brightgreen) | ![Build Status](https://travis-ci.org/kleinpanic/SystemD.svg?branch=main)                      | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/SystemD/badge.svg?branch=main) |
 | systemdscripts            | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/systemdscripts)            | ![License](https://img.shields.io/github/license/kleinpanic/systemdscripts)            | ![Status](https://img.shields.io/badge/status-completed-brightgreen) | ![Build Status](https://travis-ci.org/kleinpanic/systemdscripts.svg?branch=main)               | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/systemdscripts/badge.svg?branch=main) |
 | systemmon                 | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/systemmon)                 | ![License](https://img.shields.io/github/license/kleinpanic/systemmon)                 | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/systemmon.svg?branch=main)                    | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/systemmon/badge.svg?branch=main) |
@@ -395,10 +417,11 @@ For a complete and automated list of my projects, you can either:
 | vector                    | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/vector)                    | ![License](https://img.shields.io/github/license/kleinpanic/vector)                    | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/vector.svg?branch=main)                      | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/vector/badge.svg?branch=main) |
 | vectorart                 | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/vectorart)                 | ![License](https://img.shields.io/github/license/kleinpanic/vectorart)                 | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/vectorart.svg?branch=main)                   | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/vectorart/badge.svg?branch=main) |
 | vimwiki                   | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/vimwiki)                   | ![License](https://img.shields.io/github/license/kleinpanic/vimwiki)                   | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/vimwiki.svg?branch=main)                     | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/vimwiki/badge.svg?branch=main) |
-| vinlookup                 | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/vinlookup)                 | ![License](https://img.shields.io/github/license/kleinpanic/vinlookup)                 | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/vinlookup.svg?branch=main)                   | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/vinlookup/badge.svg?branch=main) |
+| vinlookup                 | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/vinlookup)                 | ![License](https://img.shields.io/github/license/kleinpanic/vinlookup)                 | ![Status](https://img.shields.io/badge/status-completed-brightgreen) | ![Build Status](https://travis-ci.org/kleinpanic/vinlookup.svg?branch=main)                   | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/vinlookup/badge.svg?branch=main) |
 | Website-practices         | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/Website-practices)         | ![License](https://img.shields.io/github/license/kleinpanic/Website-practices)         | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/Website-practices.svg?branch=main)           | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/Website-practices/badge.svg?branch=main) |
 | wrapperscripts            | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/wrapperscripts)            | ![License](https://img.shields.io/github/license/kleinpanic/wrapperscripts)            | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/wrapperscripts.svg?branch=main)              | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/wrapperscripts/badge.svg?branch=main) |
 | x11                       | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/x11)                       | ![License](https://img.shields.io/github/license/kleinpanic/x11)                       | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/x11.svg?branch=main)                         | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/x11/badge.svg?branch=main) |
+| yt-dlpw                   | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/yt-dlpw)                   | ![License](https://img.shields.io/github/license/kleinpanic/yt-dlpw)                   | ![Status](https://img.shields.io/badge/status-completed-brightgreen) | ![Build Status](https://travis-ci.org/kleinpanic/yt-dlpw.svg?branch=main)                     | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/yt-dlpw/badge.svg?branch=main) |
 | ZeteHub                   | ![Top Language](https://img.shields.io/github/languages/top/kleinpanic/ZeteHub)                   | ![License](https://img.shields.io/github/license/kleinpanic/ZeteHub)                   | ![Status](https://img.shields.io/badge/status-in%20progress-yellow) | ![Build Status](https://travis-ci.org/kleinpanic/ZeteHub.svg?branch=main)                     | ![Coverage Status](https://coveralls.io/repos/github/kleinpanic/ZeteHub/badge.svg?branch=main) |
 
 
@@ -406,7 +429,7 @@ For a complete and automated list of my projects, you can either:
 ### Project Progress
 
 ```plaintext
-| Progress: ███████████▒▒▒▒▒▒ 75% (50/66 Projects Complete) |
+| Progress: ███████████▒▒▒▒▒▒ 78% (60/77 Projects Complete) |
 ```
 
 </details>
