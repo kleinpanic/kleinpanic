@@ -16,7 +16,7 @@
 
 <p align="center">
 <a href="https://github.com/kleinpanic">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2000&pause=100&multiline=true&width=500&height=80&lines=Kleinpanic;Linux+Enthusiast+%7C+Debian+Lover+%7C+Open+Source+Advocate;Scripting+%7C+System+Optimization+%7C+Low-Level+Coding" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=2000&pause=100&multiline=true&width=700&height=120&color=EA24F7FF&lines=Kleinpanic;Linux+Enthusiast+%7C+Debian+Enjoyer+%7C+Open+Source+Advocate;DRM+Hater+%7C+Low-Level+Coder+%7C+System+Optimizer;C++%2C+Bash%2C+Python+%7C+Automation+%7C+Custom+Tools;Efficient+%7C+Privacy-First+%7C+Problem-Solver" alt="Typing SVG" />
 </a>
 </p>
 
