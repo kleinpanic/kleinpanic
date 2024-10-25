@@ -1,3 +1,9 @@
+<p align="center">
+<a href="https://github.com/kleinpanic">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2000&pause=100&multiline=true&width=500&height=80&lines=Kleinpanic;Linux+Enthusiast+%7C+Debian+Lover+%7C+Open+Source+Advocate;Scripting+%7C+System+Optimization+%7C+Low-Level+Coding" alt="Typing SVG" />
+</a>
+</p>
+
 <h1 align="center">🐧 KleinPanic General Readme</h1>
 
 <div align="center">
