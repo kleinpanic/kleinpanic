@@ -528,14 +528,6 @@ Whether deploying apps or hosting websites, these are my trusted cloud and web p
 - **Namecheap**: Domain registration and DNS management for various projects.  
   ![Namecheap](https://img.shields.io/badge/DNS-Namecheap-orange)
 
-## 🛡 **Additional Tools & Techniques**
-A few more tools I utilize to enhance my workflow:
-
-- **Curl**: Command-line tool for transferring data with URLs.
-- **Netcat**: For reading and writing data across network connections.
-- **Zsh**: Customized shell environment for increased productivity.
-
-I’m constantly adding new tools to my arsenal, refining my workflow, and experimenting with new tech. You can see more details on my [project page](https://kleinpanic.com/projects) or check out my latest repositories on [GitHub](https://github.com/kleinpanic).
 
 ---
 
