@@ -138,16 +138,23 @@ Older and retired projects: [Archived](https://github.com/kleinpanic/Archived)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-## Infrastructure
+## Self-Hosted
 
-```
-Namecheap DNS
-    └── DigitalOcean droplet  (edge node)
-            └── HAProxy + WireGuard tunnel
-                    └── Dell PowerEdge R630  (home server)
-                            ├── Gitea    git.kleinpanic.com
-                            └── services
-```
+Everything I run, I run myself. Public endpoints:
+
+<p align="center">
+  <a href="https://kleinpanic.com"><img src="https://img.shields.io/badge/web-kleinpanic.com-EA24F7?style=for-the-badge&logo=firefox&logoColor=white" /></a>
+  &nbsp;
+  <a href="https://git.kleinpanic.com"><img src="https://img.shields.io/badge/git-git.kleinpanic.com-609926?style=for-the-badge&logo=gitea&logoColor=white" /></a>
+</p>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=kleinpanic&theme=radical&no-frame=true&margin-w=6&column=7" />
+</p>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -163,6 +170,14 @@ Namecheap DNS
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=kleinpanic&theme=radical&ring=EA24F7&fire=EA24F7&currStreakLabel=EA24F7&hide_border=true" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kleinpanic&layout=compact&theme=radical&hide_border=true&langs_count=8&bg_color=0d1117&title_color=EA24F7&text_color=ffffff" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=kleinpanic&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=EA24F7&icon_color=EA24F7&text_color=ffffff&count_private=true" />
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
