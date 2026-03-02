@@ -246,10 +246,6 @@ Everything I run, I run myself. Public endpoints:
   <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/screenshot.svg" />
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/pagespeed.svg" />
-</p>
-
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## Stats
