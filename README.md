@@ -278,10 +278,6 @@ Everything I run, I run myself. Public endpoints:
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=kleinpanic&theme=github-compact&color=EA24F7&line=EA24F7&point=ffffff&area=true&area_color=EA24F7&hide_border=true&bg_color=0d1117" />
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/habits.svg" />
-</p>
-
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## People
