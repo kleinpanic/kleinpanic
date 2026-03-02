@@ -17,6 +17,7 @@
   <a href="https://git.kleinpanic.com"><img src="https://img.shields.io/badge/git-git.kleinpanic.com-609926?style=flat-square&logo=gitea&logoColor=white" /></a>
   <img src="https://img.shields.io/badge/OS-Debian-A81D33?style=flat-square&logo=debian&logoColor=white" />
   <img src="https://img.shields.io/badge/editor-Neovim-57A143?style=flat-square&logo=neovim&logoColor=white" />
+  <img src="https://img.shields.io/badge/WM-DWM-1E1E2E?style=flat-square&logo=linux&logoColor=white" />
   <img src="https://img.shields.io/github/followers/kleinpanic?label=followers&style=flat-square&color=EA24F7&labelColor=0d1117" />
   <img src="https://img.shields.io/github/stars/kleinpanic?label=stars&style=flat-square&color=EA24F7&labelColor=0d1117&affiliations=OWNER" />
   <img src="https://komarev.com/ghpvc/?username=kleinpanic&color=EA24F7&style=flat-square&label=views" />
@@ -30,6 +31,22 @@
 │  or solve a problem I couldn't find a good solution for.    │
 │  Privacy-first. Self-hosted where it makes sense. No DRM.   │
 └─────────────────────────────────────────────────────────────┘
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## Setup
+
+```
+┌──────────────────┬────────────────────────────────────────────┐
+│  OS              │  Debian 13 (Trixie)                        │
+│  WM              │  DWM                                       │
+│  Editor          │  Neovim                                    │
+│  Shell           │  Zsh                                       │
+│  Terminal        │  st                                        │
+│  Hardware        │  ThinkPad   ·  Dell PowerEdge R630 (srv)   │
+│                  │  Raspberry Pi 5  ·  DO droplet (edge)      │
+└──────────────────┴────────────────────────────────────────────┘
 ```
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -168,6 +185,14 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+## Calendar
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/calendar.svg" />
+</p>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 ## Achievements
 
 <p align="center">
@@ -192,6 +217,22 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+## People
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/people.svg" />
+</p>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## Recently Starred
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/stars.svg" />
+</p>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 ## Contributions
 
 <p align="center">
@@ -201,6 +242,16 @@ Everything I run, I run myself. Public endpoints:
     <img alt="contribution snake" src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/output/github-snake-dark.svg" />
   </picture>
 </p>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+<details>
+<summary><b>fortune</b></summary>
+<br/>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/fortune.svg" />
+</p>
+</details>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
