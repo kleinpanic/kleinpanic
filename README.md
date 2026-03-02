@@ -10,12 +10,13 @@
  |_|\_\_\___|_|_||_|_| \__,_|_||_|_\__|
 </pre>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=2000&pause=100&multiline=true&width=700&height=100&color=EA24F7&lines=Linux+%7C+Debian+%7C+Neovim+%7C+DWM;C+%7C+Python+%7C+TypeScript+%7C+Rust+%7C+Bash;Systems+%C2%B7+Networking+%C2%B7+Terminal+Tools;DRM+Hater+%C2%B7+Privacy-First+%C2%B7+Self-Hosted" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=2000&pause=100&multiline=true&width=700&height=100&color=EA24F7&lines=Linux+%7C+Debian+%7C+Arch+%7C+Neovim+%7C+DWM;C+%7C+Python+%7C+TypeScript+%7C+Rust+%7C+Bash;Systems+%C2%B7+Networking+%C2%B7+Terminal+Tools;DRM+Hater+%C2%B7+Privacy-First+%C2%B7+Self-Hosted" />
 
 <p>
   <a href="https://kleinpanic.com"><img src="https://img.shields.io/badge/web-kleinpanic.com-EA24F7?style=flat-square&logo=firefox&logoColor=white" /></a>
   <a href="https://git.kleinpanic.com"><img src="https://img.shields.io/badge/git-git.kleinpanic.com-609926?style=flat-square&logo=gitea&logoColor=white" /></a>
   <img src="https://img.shields.io/badge/OS-Debian-A81D33?style=flat-square&logo=debian&logoColor=white" />
+  <img src="https://img.shields.io/badge/OS-Arch-1793D1?style=flat-square&logo=archlinux&logoColor=white" />
   <img src="https://img.shields.io/badge/editor-Neovim-57A143?style=flat-square&logo=neovim&logoColor=white" />
   <img src="https://img.shields.io/badge/WM-DWM-1E1E2E?style=flat-square&logo=linux&logoColor=white" />
   <img src="https://img.shields.io/github/followers/kleinpanic?label=followers&style=flat-square&color=EA24F7&labelColor=0d1117" />
@@ -38,15 +39,19 @@
 ## Setup
 
 ```
-┌──────────────────┬────────────────────────────────────────────┐
-│  OS              │  Debian 13 (Trixie)                        │
-│  WM              │  DWM                                       │
-│  Editor          │  Neovim                                    │
-│  Shell           │  Zsh                                       │
-│  Terminal        │  st                                        │
-│  Hardware        │  ThinkPad   ·  Dell PowerEdge R630 (srv)   │
-│                  │  Raspberry Pi 5  ·  DO droplet (edge)      │
-└──────────────────┴────────────────────────────────────────────┘
+┌──────────────────┬─────────────────────────────────────────────────────┐
+│  OS              │  Debian 13 (Trixie)  ·  Arch Linux                  │
+│  WM              │  DWM                                                 │
+│  Editor          │  Neovim                                              │
+│  Shell           │  Zsh                                                 │
+│  Terminal        │  st                                                  │
+├──────────────────┼─────────────────────────────────────────────────────┤
+│  Workstations    │  Dell Inspiron (x2)  ·  MacBook Pro                 │
+│  Server          │  Dell PowerEdge R630                                 │
+│  AI              │  NVIDIA DGX Spark                                    │
+│  SBCs            │  Raspberry Pi 5  ·  Raspberry Pi 4                  │
+│  Edge            │  DigitalOcean droplet                                │
+└──────────────────┴─────────────────────────────────────────────────────┘
 ```
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -67,7 +72,7 @@ curl https://kleinpanic.com/ip     # check your public IP
 <p align="center">
   <img src="https://skillicons.dev/icons?i=c,py,bash,ts,js,java,rust,arduino&perline=8&theme=dark" />
   <br/>
-  <img src="https://skillicons.dev/icons?i=linux,debian,neovim,git,docker,nginx,githubactions,raspberrypi&perline=8&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=linux,debian,arch,neovim,git,docker,nginx,githubactions,raspberrypi&perline=9&theme=dark" />
   <br/>
   <img src="https://skillicons.dev/icons?i=sqlite,mongodb,github,cmake&perline=8&theme=dark" />
 </p>
