@@ -329,14 +329,6 @@ Everything I run, I run myself. Public endpoints:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 <details>
-<summary><b>reactions</b></summary>
-<br/>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/reactions.svg" />
-</p>
-</details>
-
-<details>
 <summary><b>fortune</b></summary>
 <br/>
 <p align="center">
