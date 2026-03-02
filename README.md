@@ -56,20 +56,8 @@
 The site is `w3m`, `lynx`, and `curl` compliant.
 
 ```bash
-# Check your public IP
-curl https://kleinpanic.com/ip
-
-# Browse from the terminal
-curl https://kleinpanic.com
-```
-
-```
- _  ___       _       _____            _         
-| |/ / |     (_)     |  __ \          (_)        KleinPanic
-| ' /| | ___  _ _ __ | |__) |_ _ _ __  _  ___    Linux tools and utilities
-|  < | |/ _ \| | '_ \|  ___/ _` | '_ \| |/ __|   https://kleinpanic.com
-| . \| |  __/| | | | | |  | (_| | | | | | (__    
-|_|\_\_|\___||_|_| |_|_|   \__,_|_| |_|_|\___|   github: kleinpanic
+curl https://kleinpanic.com        # browse from the terminal
+curl https://kleinpanic.com/ip     # check your public IP
 ```
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -161,6 +149,89 @@ Older and retired projects: [Archived](https://github.com/kleinpanic/Archived)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+## Things I've built that I actually use
+
+<details>
+<summary><kbd>toralizer</kbd> — transparent Tor proxy for any program</summary>
+<br/>
+
+```bash
+$ toralizer curl https://ifconfig.me
+# → routes curl through Tor via LD_PRELOAD SOCKS5 hook
+# → no app config needed, works on anything dynamically linked
+
+$ toralizer wget https://example.com/file.tar.gz
+```
+
+</details>
+
+<details>
+<summary><kbd>lumos</kbd> — unified brightness control (laptop + external monitors)</summary>
+<br/>
+
+```bash
+$ lumos 70          # set laptop backlight to 70% via sysfs
+$ lumos --ddc 50    # set external monitor via DDC/CI protocol
+$ lumos             # show current brightness levels
+```
+
+</details>
+
+<details>
+<summary><kbd>quicknotes</kbd> — terminal sticky notes with VimWiki integration</summary>
+<br/>
+
+```bash
+$ quicknotes add "fix the lumos DDC edge case"
+$ quicknotes ls
+  [0] fix the lumos DDC edge case
+  [1] read more about libsodium streams
+
+$ quicknotes nb     # opens a VimWiki scratchpad in Neovim
+```
+
+</details>
+
+<details>
+<summary><kbd>OSLA</kbd> — offline LICENSE generator</summary>
+<br/>
+
+```bash
+$ osla MIT          # writes LICENSE with current year + git author
+$ osla --list       # show available license templates
+$ osla GPL-3.0
+```
+
+</details>
+
+<details>
+<summary><kbd>bx</kbd> — encrypted, resumable backups over SSH</summary>
+<br/>
+
+```bash
+$ bx client sync /home/klein user@server:/backups
+# → BLAKE3 hashed, libsodium encrypted, zstd compressed
+# → resumable, SQLite manifest, deduped
+
+$ bx server start   # run as a backup receive daemon
+```
+
+</details>
+
+<details>
+<summary><kbd>fblogin</kbd> — framebuffer display manager</summary>
+<br/>
+
+```bash
+# Replaces getty entirely — runs directly on /dev/fb0
+# PAM auth + fprintd fingerprint support
+# No X11, no Wayland, no display server needed at boot
+```
+
+</details>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 ## Self-Hosted
 
 Everything I run, I run myself. Public endpoints:
@@ -169,6 +240,14 @@ Everything I run, I run myself. Public endpoints:
   <a href="https://kleinpanic.com"><img src="https://img.shields.io/badge/web-kleinpanic.com-EA24F7?style=for-the-badge&logo=firefox&logoColor=white" /></a>
   &nbsp;
   <a href="https://git.kleinpanic.com"><img src="https://img.shields.io/badge/git-git.kleinpanic.com-609926?style=for-the-badge&logo=gitea&logoColor=white" /></a>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/screenshot.svg" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/pagespeed.svg" />
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -181,6 +260,10 @@ Everything I run, I run myself. Public endpoints:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/overview.svg" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/lines.svg" />
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -244,6 +327,14 @@ Everything I run, I run myself. Public endpoints:
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+<details>
+<summary><b>reactions</b></summary>
+<br/>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/reactions.svg" />
+</p>
+</details>
 
 <details>
 <summary><b>fortune</b></summary>

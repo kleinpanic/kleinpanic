@@ -31,6 +31,17 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
 
+      # ── Lines of code (total across all repos) ────────────────────────────
+      - name: Lines
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics/lines.svg
+          user: kleinpanic
+          base: ""
+          plugin_lines: yes
+          plugin_lines_sections: base
+
       # ── Achievements ───────────────────────────────────────────────────────
       - name: Achievements
         uses: lowlighter/metrics@latest
@@ -109,6 +120,47 @@ jobs:
           base: ""
           plugin_stars: yes
           plugin_stars_limit: 4
+
+      # ── Emoji reactions (personality) ─────────────────────────────────────
+      - name: Reactions
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics/reactions.svg
+          user: kleinpanic
+          base: ""
+          plugin_reactions: yes
+          plugin_reactions_display: relative
+          plugin_reactions_limit: 200
+          plugin_reactions_limit_issues: 100
+          plugin_reactions_limit_discussions: 100
+          plugin_reactions_limit_discussions_comments: 100
+
+      # ── Website screenshot ────────────────────────────────────────────────
+      - name: Screenshot
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics/screenshot.svg
+          user: kleinpanic
+          base: ""
+          plugin_screenshot: yes
+          plugin_screenshot_title: kleinpanic.com
+          plugin_screenshot_url: https://kleinpanic.com
+          plugin_screenshot_selector: body
+          plugin_screenshot_background: yes
+
+      # ── Pagespeed / Lighthouse ────────────────────────────────────────────
+      - name: Pagespeed
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics/pagespeed.svg
+          user: kleinpanic
+          base: ""
+          plugin_pagespeed: yes
+          plugin_pagespeed_detailed: yes
+          plugin_pagespeed_url: https://kleinpanic.com
 
       # ── Fortune cookie ────────────────────────────────────────────────────
       - name: Fortune
