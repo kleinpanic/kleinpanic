@@ -156,10 +156,22 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-## Trophies
+## Stats
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=kleinpanic&theme=radical&no-frame=true&margin-w=6&column=7" />
+  <img src="https://streak-stats.demolab.com?user=kleinpanic&theme=radical&ring=EA24F7&fire=EA24F7&currStreakLabel=EA24F7&hide_border=true" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/overview.svg" />
+</p>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## Achievements
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/achievements.svg" />
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -170,12 +182,12 @@ Everything I run, I run myself. Public endpoints:
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=kleinpanic&theme=github-compact&color=EA24F7&line=EA24F7&point=ffffff&area=true&area_color=EA24F7&hide_border=true&bg_color=0d1117" />
 </p>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-## Stats
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/activity.svg" />
+</p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=kleinpanic&theme=radical&ring=EA24F7&fire=EA24F7&currStreakLabel=EA24F7&hide_border=true" />
+  <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/habits.svg" />
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
