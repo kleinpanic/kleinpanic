@@ -15,6 +15,7 @@
 <p>
   <a href="https://kleinpanic.com"><img src="https://img.shields.io/badge/web-kleinpanic.com-EA24F7?style=flat-square&logo=firefox&logoColor=white" /></a>
   <a href="https://git.kleinpanic.com"><img src="https://img.shields.io/badge/git-git.kleinpanic.com-609926?style=flat-square&logo=gitea&logoColor=white" /></a>
+  <a href="https://huggingface.co/kleinpanic93"><img src="https://img.shields.io/badge/huggingface-kleinpanic93-FFD21E?style=flat-square&logo=huggingface&logoColor=black" /></a>
   <img src="https://img.shields.io/badge/OS-Debian-A81D33?style=flat-square&logo=debian&logoColor=white" />
   <img src="https://img.shields.io/badge/OS-Arch-1793D1?style=flat-square&logo=archlinux&logoColor=white" />
   <img src="https://img.shields.io/badge/editor-Neovim-57A143?style=flat-square&logo=neovim&logoColor=white" />
@@ -250,6 +251,18 @@ Everything I run, I run myself. Public endpoints:
 <p align="center">
   <img src="https://raw.githubusercontent.com/kleinpanic/kleinpanic/main/metrics/screenshot.svg" />
 </p>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## Hugging Face
+
+<p align="center">
+  <a href="https://huggingface.co/kleinpanic93"><img src="https://img.shields.io/badge/huggingface-kleinpanic93-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" /></a>
+</p>
+
+| Model | Type |
+|---|---|
+| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | Text Generation · 17B |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
