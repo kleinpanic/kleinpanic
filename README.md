@@ -111,8 +111,8 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 ## Languages
 
-**Python** 18 · **C** 14 · **Shell** 9 · **TypeScript** 8 · **JavaScript** 4 · **HTML** 2  
-<sub>55 owned repos with a detected primary language</sub>
+**Python** 19 · **C** 14 · **Shell** 9 · **TypeScript** 8 · **JavaScript** 4 · **HTML** 2  
+<sub>56 owned repos with a detected primary language</sub>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -232,7 +232,7 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<p align="center"><sub>Last refreshed 2026-07-22 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
+<p align="center"><sub>Last refreshed 2026-07-23 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=80&section=footer" />
