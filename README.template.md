@@ -18,14 +18,9 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=2000&pause=100&multiline=true&width=700&height=100&color=EA24F7&lines=Linux+%7C+Debian+%7C+Arch+%7C+Neovim+%7C+DWM;C+%7C+Python+%7C+TypeScript+%7C+Rust+%7C+Bash;Systems+%C2%B7+Networking+%C2%B7+Terminal+Tools;DRM+Hater+%C2%B7+Privacy-First+%C2%B7+Self-Hosted" />
 
-<p>
-  <a href="https://kleinpanic.com"><img src="https://img.shields.io/badge/web-kleinpanic.com-EA24F7?style=flat-square&logo=firefox&logoColor=white" /></a>
-  <a href="https://git.kleinpanic.com"><img src="https://img.shields.io/badge/git-git.kleinpanic.com-609926?style=flat-square&logo=gitea&logoColor=white" /></a>
-  <a href="https://github.com/kleinpanic"><img src="https://img.shields.io/badge/github-kleinpanic-181717?style=flat-square&logo=github&logoColor=white" /></a>
-  <a href="https://huggingface.co/kleinpanic93"><img src="https://img.shields.io/badge/huggingface-kleinpanic93-FF9D00?style=flat-square&logo=huggingface&logoColor=white" /></a>
-</p>
+{{LINKS}}
 
-<p>**61** public repos · **11** followers · **23** stars across owned repos</p>
+<p>{{STATS}}</p>
 </div>
 
 ```
@@ -84,14 +79,7 @@ curl https://kleinpanic.com/ip     # check your public IP
 
 ## Featured Projects
 
-| Repo | About | ★ |
-| --- | --- | --- |
-| [fblogin](https://github.com/kleinpanic/fblogin) | fblogin is a lightweight, framebuffer-based login manager for Debian. It replaces tty1 with a graphical UI, l… | 2 |
-| [toralizer](https://github.com/kleinpanic/toralizer) | Toralizer is a small, LD_PRELOAD-based tool that intercepts a program’s outgoing network connections and rout… | 1 |
-| [GSD-OC](https://github.com/kleinpanic/GSD-OC) | GSD lifecycle orchestration as a native OpenClaw plugin — enforced research→plan→execute→verify→ship, hybrid… | 1 |
-| [lumos](https://github.com/kleinpanic/lumos) | Lumos—cross-platform CLI for backlight brightness control. Supports internal panels via sysfs and external DD… | 1 |
-| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings. Self-hosted on NVI… | 2 |
-| [mission-control](https://github.com/kleinpanic/mission-control) | Real-time dashboard for monitoring and orchestrating OpenClaw agents. WebSocket-powered Next.js app with agen… | 0 |
+{{FEATURED}}
 
 Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpanic?tab=repositories) · retired work: [Archived](https://github.com/kleinpanic/Archived)
 
@@ -99,41 +87,19 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 ## Recently Active
 
-| Repo | About | Last push |
-| --- | --- | --- |
-| [ups-orchestrator](https://github.com/kleinpanic/ups-orchestrator) | NUT-driven UPS power-event monitor with beautiful per-UPS Discord embeds (homelab, dual C… | 2026-07-22 |
-| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-07-22 |
-| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings… | 2026-07-22 |
-| [mission-control](https://github.com/kleinpanic/mission-control) | Real-time dashboard for monitoring and orchestrating OpenClaw agents. WebSocket-powered N… | 2026-07-22 |
-| [shut-the-box-optimal-strategy](https://github.com/kleinpanic/shut-the-box-optimal-strategy) | Statistically optimal Shut the Box play assistant with dynamic programming engine | 2026-07-21 |
+{{RECENT}}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## Languages
 
-**Python** 18 · **C** 14 · **Shell** 9 · **TypeScript** 8 · **JavaScript** 4 · **HTML** 2  
-<sub>55 owned repos with a detected primary language</sub>
+{{LANGUAGES}}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## Hugging Face
 
-Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic93), refreshed weekly.
-
-**Models**
-
-| Model | Downloads | Likes |
-| --- | --- | --- |
-| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 8 | 1 |
-| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 385 | 1 |
-| [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 16 | 0 |
-| [canvas-calendar-agent-v7-dpo-gguf](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo-gguf) | 0 | 0 |
-
-**Datasets**
-
-| Dataset | Downloads |
-| --- | --- |
-| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 10 |
+{{HUGGINGFACE}}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -232,7 +198,7 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<p align="center"><sub>Last refreshed 2026-07-22 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
+{{LAST_UPDATED}}
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=80&section=footer" />

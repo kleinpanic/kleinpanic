@@ -1,0 +1,551 @@
+[
+  {
+    "name": "ups-orchestrator",
+    "html_url": "https://github.com/kleinpanic/ups-orchestrator",
+    "description": "NUT-driven UPS power-event monitor with beautiful per-UPS Discord embeds (homelab, dual CyberPower UPS)",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2026-07-22T23:04:14Z",
+    "fork": false
+  },
+  {
+    "name": "CS3704-Canvas-Project",
+    "html_url": "https://github.com/kleinpanic/CS3704-Canvas-Project",
+    "description": "CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo",
+    "stargazers_count": 1,
+    "language": "Python",
+    "pushed_at": "2026-07-22T08:10:09Z",
+    "fork": false
+  },
+  {
+    "name": "memory-spark",
+    "html_url": "https://github.com/kleinpanic/memory-spark",
+    "description": "15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings. Self-hosted on NVIDIA DGX Spark. https://kleinpanic.github.io/memory-spark/",
+    "stargazers_count": 2,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-22T06:05:56Z",
+    "fork": false
+  },
+  {
+    "name": "mission-control",
+    "html_url": "https://github.com/kleinpanic/mission-control",
+    "description": "Real-time dashboard for monitoring and orchestrating OpenClaw agents. WebSocket-powered Next.js app with agents panel, kanban board, cost tracker, and sessions viewer.",
+    "stargazers_count": 0,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-22T01:12:43Z",
+    "fork": false
+  },
+  {
+    "name": "shut-the-box-optimal-strategy",
+    "html_url": "https://github.com/kleinpanic/shut-the-box-optimal-strategy",
+    "description": "Statistically optimal Shut the Box play assistant with dynamic programming engine",
+    "stargazers_count": 0,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-21T16:12:02Z",
+    "fork": false
+  },
+  {
+    "name": "TermChroma",
+    "html_url": "https://github.com/kleinpanic/TermChroma",
+    "description": "TermChroma is a powerful Python CLI/TUI tool that converts images into ASCII art with optional 256-color ANSI codes, multiple gradients, and dynamic resizing. Features an interactive TUI for live adjustments, plus the ability to save colorized ASCII output to a file.",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2026-07-21T15:34:26Z",
+    "fork": false
+  },
+  {
+    "name": "oc-config-gate",
+    "html_url": "https://github.com/kleinpanic/oc-config-gate",
+    "description": "OpenClaw config approval gate with native Discord buttons, validation, blessing, audit, and safe restarts",
+    "stargazers_count": 0,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-21T15:22:06Z",
+    "fork": false
+  },
+  {
+    "name": "Archived",
+    "html_url": "https://github.com/kleinpanic/Archived",
+    "description": "Graveyard of Projects that are no longer in development, have been improved, written, or given up on.",
+    "stargazers_count": 0,
+    "language": "C",
+    "pushed_at": "2026-07-21T12:30:08Z",
+    "fork": false
+  },
+  {
+    "name": "tone_generator",
+    "html_url": "https://github.com/kleinpanic/tone_generator",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2026-07-21T10:37:11Z",
+    "fork": false
+  },
+  {
+    "name": "File-Transfer-Website",
+    "html_url": "https://github.com/kleinpanic/File-Transfer-Website",
+    "description": "A portable website designed for minimal traffic. Main purpose is to transfer files between a Debian Gnu/linux computer and my iPhone. As a consequence it is compatible for multiple different types of file transfers over a website.",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2026-07-21T10:20:06Z",
+    "fork": false
+  },
+  {
+    "name": "datahall",
+    "html_url": "https://github.com/kleinpanic/datahall",
+    "description": "An interactive educational museum of database internals — storage engines, concurrency, indexing. Astro static site.",
+    "stargazers_count": 0,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-21T00:20:44Z",
+    "fork": false
+  },
+  {
+    "name": "xrandrw",
+    "html_url": "https://github.com/kleinpanic/xrandrw",
+    "description": "Self-healing X11 display layout daemon: remembers monitors by EDID, auto-places them on hotplug",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2026-07-20T04:38:24Z",
+    "fork": false
+  },
+  {
+    "name": "alarm-pi",
+    "html_url": "https://github.com/kleinpanic/alarm-pi",
+    "description": "Headless Raspberry Pi alarm clock with a CLI and a Tailwind LAN web UI (live dismiss/snooze, irritable mode, persistent snooze).",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2026-07-18T03:39:52Z",
+    "fork": false
+  },
+  {
+    "name": "maze_solver",
+    "html_url": "https://github.com/kleinpanic/maze_solver",
+    "description": "Maze generation and pathfinding lab with GUI, TUI, and GitHub Pages WebUI",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2026-07-16T18:05:10Z",
+    "fork": false
+  },
+  {
+    "name": "Monoprice-MP10-V72-Y-Boundary-Firmware-Patch",
+    "html_url": "https://github.com/kleinpanic/Monoprice-MP10-V72-Y-Boundary-Firmware-Patch",
+    "description": "Unofficial Monoprice MP10 v72 Y-boundary firmware patch for calibration overtravel",
+    "stargazers_count": 1,
+    "language": "C",
+    "pushed_at": "2026-07-15T04:09:48Z",
+    "fork": false
+  },
+  {
+    "name": "translator",
+    "html_url": "https://github.com/kleinpanic/translator",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "Shell",
+    "pushed_at": "2026-07-10T23:43:19Z",
+    "fork": false
+  },
+  {
+    "name": "oc-tasks",
+    "html_url": "https://github.com/kleinpanic/oc-tasks",
+    "description": "Unified task management CLI for OpenClaw agents. Kan ban workflow, priority queuing, SLA tracking, and multi-list support.",
+    "stargazers_count": 1,
+    "language": "HTML",
+    "pushed_at": "2026-06-29T03:14:37Z",
+    "fork": false
+  },
+  {
+    "name": "oc-twilio-voice",
+    "html_url": "https://github.com/kleinpanic/oc-twilio-voice",
+    "description": "Custom Twilio voice server for OpenClaw with Spark STT/TTS failover",
+    "stargazers_count": 0,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-24T01:55:58Z",
+    "fork": false
+  },
+  {
+    "name": "GSD-OC",
+    "html_url": "https://github.com/kleinpanic/GSD-OC",
+    "description": "GSD lifecycle orchestration as a native OpenClaw plugin — enforced research→plan→execute→verify→ship, hybrid retrieval, 0 Discord slots",
+    "stargazers_count": 1,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-22T00:25:21Z",
+    "fork": false
+  },
+  {
+    "name": "bluebubbles-mcp",
+    "html_url": "https://github.com/kleinpanic/bluebubbles-mcp",
+    "description": "BlueBubbles MCP server for iMessage/SMS via Private API",
+    "stargazers_count": 0,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-20T02:49:51Z",
+    "fork": false
+  },
+  {
+    "name": "VTWebCatCLI",
+    "html_url": "https://github.com/kleinpanic/VTWebCatCLI",
+    "description": "WebcatCLI is a Python-based WebCAT-style pre-submission checker for Java projects. It enforces coding and Javadoc rules, runs JUnit tests with configurable assertions, auto-generates a minimal Maven POM, and verifies 100% method and branch coverage—with an optional `--run-main` mode. This is all based on the Virginia Tech Universities web-CAT rules",
+    "stargazers_count": 1,
+    "language": "Shell",
+    "pushed_at": "2026-06-20T01:07:07Z",
+    "fork": false
+  },
+  {
+    "name": "Ai-Pi-Cam",
+    "html_url": "https://github.com/kleinpanic/Ai-Pi-Cam",
+    "description": "Appliance-style AI camera for Raspberry Pi 4 + OV5647 — CPU-only TFLite detection, 5 modes, 21-pt hand skeleton, LAN MJPEG + native HUD, local recording. No cloud.",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2026-06-18T04:56:27Z",
+    "fork": false
+  },
+  {
+    "name": "xcode-mcp-suite",
+    "html_url": "https://github.com/kleinpanic/xcode-mcp-suite",
+    "description": "SDK, CLI, and MCP proxy for Xcode's agentic coding bridge (xcrun mcpbridge) — Xcode 26.3+",
+    "stargazers_count": 1,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-08T20:02:46Z",
+    "fork": false
+  },
+  {
+    "name": "Ooxele3-Firmware",
+    "html_url": "https://github.com/kleinpanic/Ooxele3-Firmware",
+    "description": "RogueMaster Flipper Zero Firmware",
+    "stargazers_count": 0,
+    "language": null,
+    "pushed_at": "2026-06-05T20:12:39Z",
+    "fork": true
+  },
+  {
+    "name": "topfive-app",
+    "html_url": "https://github.com/kleinpanic/topfive-app",
+    "description": "Top Five social app - create and share your top 5 lists",
+    "stargazers_count": 0,
+    "language": "HTML",
+    "pushed_at": "2026-04-21T22:13:04Z",
+    "fork": false
+  },
+  {
+    "name": "ghost-pipeline",
+    "html_url": "https://github.com/kleinpanic/ghost-pipeline",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "JavaScript",
+    "pushed_at": "2026-04-19T00:58:45Z",
+    "fork": false
+  },
+  {
+    "name": "claude-code",
+    "html_url": "https://github.com/kleinpanic/claude-code",
+    "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+    "stargazers_count": 0,
+    "language": null,
+    "pushed_at": "2026-04-18T01:34:30Z",
+    "fork": true
+  },
+  {
+    "name": "claude-code-l",
+    "html_url": "https://github.com/kleinpanic/claude-code-l",
+    "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+    "stargazers_count": 1,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-14T05:08:00Z",
+    "fork": true
+  },
+  {
+    "name": "The-Stein-Files",
+    "html_url": "https://github.com/kleinpanic/The-Stein-Files",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "JavaScript",
+    "pushed_at": "2026-03-20T05:01:28Z",
+    "fork": false
+  },
+  {
+    "name": "FleaMarketAI",
+    "html_url": "https://github.com/kleinpanic/FleaMarketAI",
+    "description": "AI API key discovery and validation tool — scans public GitHub repos/gists for leaked keys and validates them live",
+    "stargazers_count": 1,
+    "language": "Python",
+    "pushed_at": "2026-03-19T03:25:42Z",
+    "fork": false
+  },
+  {
+    "name": "pplx-research",
+    "html_url": "https://github.com/kleinpanic/pplx-research",
+    "description": "Monolithic research CLI powered by Perplexity Sonar API with auto-classification, gap analysis, and multi-perspective synthesis",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2026-03-17T00:57:52Z",
+    "fork": false
+  },
+  {
+    "name": "sanebox-cli",
+    "html_url": "https://github.com/kleinpanic/sanebox-cli",
+    "description": "CLI for SaneBox email management — train folders, manage blacklist, view digests. Dual auth: OAuth + session cookie.",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2026-03-17T00:24:28Z",
+    "fork": false
+  },
+  {
+    "name": "obd-dashboard",
+    "html_url": "https://github.com/kleinpanic/obd-dashboard",
+    "description": "Real-time web dashboard for OBD-II vehicle data",
+    "stargazers_count": 1,
+    "language": "Python",
+    "pushed_at": "2026-03-16T03:51:34Z",
+    "fork": false
+  },
+  {
+    "name": "battery-watcher",
+    "html_url": "https://github.com/kleinpanic/battery-watcher",
+    "description": "Lightweight C daemon for battery threshold notifications",
+    "stargazers_count": 0,
+    "language": "C",
+    "pushed_at": "2026-03-15T19:07:51Z",
+    "fork": false
+  },
+  {
+    "name": "fblogin",
+    "html_url": "https://github.com/kleinpanic/fblogin",
+    "description": "fblogin is a lightweight, framebuffer-based login manager for Debian. It replaces tty1 with a graphical UI, leveraging PAM for authentication and optional fingerprint verification via fprintd. Designed for minimalism, it features direct framebuffer rendering, raw terminal input handling, and seamless systemd integration as a getty replacement.",
+    "stargazers_count": 2,
+    "language": "C",
+    "pushed_at": "2026-03-11T19:41:45Z",
+    "fork": false
+  },
+  {
+    "name": "CanvasTui",
+    "html_url": "https://github.com/kleinpanic/CanvasTui",
+    "description": "Personal project I use for canvas. Specifically for VT. Known limitation is portability.",
+    "stargazers_count": 1,
+    "language": "Python",
+    "pushed_at": "2026-03-11T19:41:42Z",
+    "fork": false
+  },
+  {
+    "name": "kleinpanic",
+    "html_url": "https://github.com/kleinpanic/kleinpanic",
+    "description": "README For my Github profile",
+    "stargazers_count": 1,
+    "language": null,
+    "pushed_at": "2026-03-11T19:41:38Z",
+    "fork": false
+  },
+  {
+    "name": "oc-boot-notify",
+    "html_url": "https://github.com/kleinpanic/oc-boot-notify",
+    "description": "OpenClaw gateway startup hook — notifies agents of interrupted tasks on reboot",
+    "stargazers_count": 0,
+    "language": "JavaScript",
+    "pushed_at": "2026-03-07T07:55:45Z",
+    "fork": false
+  },
+  {
+    "name": "canvas-lms",
+    "html_url": "https://github.com/kleinpanic/canvas-lms",
+    "description": "Read-only Canvas LMS API wrapper for OpenClaw agents — courses, assignments, grades, announcements, and more",
+    "stargazers_count": 1,
+    "language": "Shell",
+    "pushed_at": "2026-03-01T22:19:51Z",
+    "fork": false
+  },
+  {
+    "name": "ICS-Satellite",
+    "html_url": "https://github.com/kleinpanic/ICS-Satellite",
+    "description": "Public Repo for requesting planetary and Satellite data by lat n Lon, calculates and returns ics based on elongation and 2 week pass over calculations",
+    "stargazers_count": 1,
+    "language": "Python",
+    "pushed_at": "2026-02-05T02:10:44Z",
+    "fork": false
+  },
+  {
+    "name": "codex-container",
+    "html_url": "https://github.com/kleinpanic/codex-container",
+    "description": "Codex from openAI, but in a container. I made this because I do not like to test and or use non-FOSS programs in my default environment; and while Codex itself is opensource, the model's it run's are not.",
+    "stargazers_count": 0,
+    "language": "Shell",
+    "pushed_at": "2026-02-04T07:44:32Z",
+    "fork": false
+  },
+  {
+    "name": "IP-Tracer",
+    "html_url": "https://github.com/kleinpanic/IP-Tracer",
+    "description": "An easy-to-use ip-tracer (beta)",
+    "stargazers_count": 0,
+    "language": null,
+    "pushed_at": "2025-11-12T10:19:48Z",
+    "fork": true
+  },
+  {
+    "name": "rpkit",
+    "html_url": "https://github.com/kleinpanic/rpkit",
+    "description": "A clean Python CLI to analyze, edit, merge, and publish Minecraft resource packs — with SHA-1, server.properties snippets, and GitHub Release upload.",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2025-08-18T06:47:35Z",
+    "fork": false
+  },
+  {
+    "name": "TreeAssist",
+    "html_url": "https://github.com/kleinpanic/TreeAssist",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "Java",
+    "pushed_at": "2025-07-29T02:12:31Z",
+    "fork": true
+  },
+  {
+    "name": "OSLA",
+    "html_url": "https://github.com/kleinpanic/OSLA",
+    "description": "OSLA — a lightweight CLI tool to generate LICENSE files from an offline database of popular open-source licenses with auto placeholder replacement and configurable defaults.",
+    "stargazers_count": 1,
+    "language": "C",
+    "pushed_at": "2025-07-18T00:19:56Z",
+    "fork": false
+  },
+  {
+    "name": "free-e",
+    "html_url": "https://github.com/kleinpanic/free-e",
+    "description": "a Free drop in clone for macOS wrapping over vm_stat. ",
+    "stargazers_count": 0,
+    "language": "Shell",
+    "pushed_at": "2025-05-11T19:49:52Z",
+    "fork": false
+  },
+  {
+    "name": "SMsh",
+    "html_url": "https://github.com/kleinpanic/SMsh",
+    "description": "SMsh.sh is a lightweight Bash script that sends SMS messages via email-to-SMS gateways using msmtp. ",
+    "stargazers_count": 0,
+    "language": "Shell",
+    "pushed_at": "2025-05-11T00:12:24Z",
+    "fork": false
+  },
+  {
+    "name": "toralizer",
+    "html_url": "https://github.com/kleinpanic/toralizer",
+    "description": "Toralizer is a small, LD_PRELOAD-based tool that intercepts a program’s outgoing network connections and routes them through the Tor network via a SOCKS5 proxy. Instead of modifying or reconfiguring your software, Toralizer transparently hooks the connect() system call at runtime, sets up a SOCKS5 handshake with Tor (usually at 127.0.0.1:9050)",
+    "stargazers_count": 1,
+    "language": "C",
+    "pushed_at": "2025-05-08T07:13:29Z",
+    "fork": false
+  },
+  {
+    "name": "lumos",
+    "html_url": "https://github.com/kleinpanic/lumos",
+    "description": "Lumos—cross-platform CLI for backlight brightness control. Supports internal panels via sysfs and external DDC/CI monitors. Features machine‑ and human‑readable output, step adjustments, percent or raw setting, on‑screen popups, and persistent device selection.",
+    "stargazers_count": 1,
+    "language": "C",
+    "pushed_at": "2025-05-03T02:37:35Z",
+    "fork": false
+  },
+  {
+    "name": "TI84",
+    "html_url": "https://github.com/kleinpanic/TI84",
+    "description": null,
+    "stargazers_count": 1,
+    "language": "C",
+    "pushed_at": "2025-05-03T02:04:28Z",
+    "fork": false
+  },
+  {
+    "name": "CERAS",
+    "html_url": "https://github.com/kleinpanic/CERAS",
+    "description": "CERAS is a Linux screen recorder that captures video and audio using X11, ALSA, and FFmpeg libraries.",
+    "stargazers_count": 1,
+    "language": "C",
+    "pushed_at": "2025-04-13T06:29:12Z",
+    "fork": false
+  },
+  {
+    "name": "QuantumStriker",
+    "html_url": "https://github.com/kleinpanic/QuantumStriker",
+    "description": "QuantumStriker is a high-performance 2D space shooter written in C using SDL2. Pilot your futuristic spaceship through a dynamic, galactic environment with adaptive difficulty and community high scores. Enjoy responsive controls and endless challenges as you climb the leaderboard!",
+    "stargazers_count": 1,
+    "language": "C",
+    "pushed_at": "2025-04-01T21:59:02Z",
+    "fork": false
+  },
+  {
+    "name": "chess",
+    "html_url": "https://github.com/kleinpanic/chess",
+    "description": "TUI python chess game",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2025-04-01T13:11:52Z",
+    "fork": false
+  },
+  {
+    "name": "vinlookup",
+    "html_url": "https://github.com/kleinpanic/vinlookup",
+    "description": "A simple Python script that retrieves vehicle details using a VIN (Vehicle Identification Number) via the NHTSA API. Enter a VIN, and the script fetches information like make, model, year, and body type. Lightweight and easy to use, requiring only Python and `requests`. Ideal for quick vehicle lookups from the command line.",
+    "stargazers_count": 0,
+    "language": "Python",
+    "pushed_at": "2025-03-05T06:46:49Z",
+    "fork": false
+  },
+  {
+    "name": "SNN",
+    "html_url": "https://github.com/kleinpanic/SNN",
+    "description": "Spiking Neural Network (SNN) implementation designed for efficiency and biologically inspired computing. This project features event-driven neuron models, synaptic plasticity, and real-time spike-based learning. Optimized for low-power and high-speed processing,",
+    "stargazers_count": 1,
+    "language": "C",
+    "pushed_at": "2025-03-03T05:45:57Z",
+    "fork": false
+  },
+  {
+    "name": "openAIcVM",
+    "html_url": "https://github.com/kleinpanic/openAIcVM",
+    "description": "VM written in C purely created by chatgpt, used as a test to see the capabilities of the best known openAI model as of Febuary 14 2025.",
+    "stargazers_count": 0,
+    "language": "C",
+    "pushed_at": "2025-02-14T23:03:17Z",
+    "fork": false
+  },
+  {
+    "name": "bat0daemon",
+    "html_url": "https://github.com/kleinpanic/bat0daemon",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "C",
+    "pushed_at": "2025-02-01T01:05:33Z",
+    "fork": false
+  },
+  {
+    "name": "bash-markdown-previewer",
+    "html_url": "https://github.com/kleinpanic/bash-markdown-previewer",
+    "description": "Supercharge your Vimwiki setup with intuitive keybindings and scripts for Markdown previews, HTML conversion, and seamless browser integration. Streamline your productivity directly from Neovim!",
+    "stargazers_count": 0,
+    "language": "Shell",
+    "pushed_at": "2025-01-26T09:57:22Z",
+    "fork": false
+  },
+  {
+    "name": "kanyesay",
+    "html_url": "https://github.com/kleinpanic/kanyesay",
+    "description": "A customizable, fun command-line tool that lets Kanye West deliver random quotes in ASCII art style! Fetch quotes from Kanye, change the look and feel of the speech bubble, and select different Kanye ASCII arts. Configure it to suit your style, and install it globally to have Kanye’s inspiration available anytime.",
+    "stargazers_count": 0,
+    "language": "Shell",
+    "pushed_at": "2024-11-06T21:46:36Z",
+    "fork": false
+  },
+  {
+    "name": "libinput-gestures-scripts",
+    "html_url": "https://github.com/kleinpanic/libinput-gestures-scripts",
+    "description": "This repository contains custom scripts for configuring and managing gestures using libinput-gestures. ",
+    "stargazers_count": 0,
+    "language": "Shell",
+    "pushed_at": "2024-10-23T02:06:36Z",
+    "fork": false
+  },
+  {
+    "name": "todo_task_manager",
+    "html_url": "https://github.com/kleinpanic/todo_task_manager",
+    "description": "Improved  lowlevel todo app using ncurses.",
+    "stargazers_count": 0,
+    "language": "C",
+    "pushed_at": "2024-10-16T17:06:43Z",
+    "fork": false
+  }
+]

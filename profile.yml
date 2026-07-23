@@ -1,0 +1,42 @@
+# kleinpanic profile README — curated config.
+# This is the ONLY file that needs manual editing. Everything displayed about
+# the entries below (descriptions, stars, activity) is pulled live from APIs
+# by scripts/generate_readme.py.
+
+github:
+  user: kleinpanic
+
+  # Six curated featured repos. Order = display order.
+  featured:
+    - fblogin
+    - toralizer
+    - GSD-OC
+    - lumos
+    - memory-spark
+    - mission-control
+
+  # "Recently Active" table settings.
+  recent_count: 5
+  recent_exclude:
+    - kleinpanic   # this profile repo — workflow commits would dominate the list
+    - Archived     # graveyard repo, noise
+
+huggingface:
+  # NOTE: huggingface.co/kleinpanic is a 404 — correct handle is kleinpanic93.
+  user: kleinpanic93
+  max_items: 5
+
+# PyPI section stays hidden until package names are confirmed.
+pypi:
+  enabled: false
+  packages: []
+
+# Links row badges (shields.io, flat-square). Add/remove entries freely;
+# unknown handles should stay commented out, not guessed.
+links:
+  - { label: web,         text: kleinpanic.com,     url: "https://kleinpanic.com",              logo: firefox,     color: "EA24F7" }
+  - { label: git,         text: git.kleinpanic.com, url: "https://git.kleinpanic.com",          logo: gitea,       color: "609926" }
+  - { label: github,      text: kleinpanic,         url: "https://github.com/kleinpanic",       logo: github,      color: "181717" }
+  - { label: huggingface, text: kleinpanic93,       url: "https://huggingface.co/kleinpanic93", logo: huggingface, color: "FF9D00" }
+  # - { label: youtube,   text: TODO-handle,        url: "https://youtube.com/@TODO",           logo: youtube,     color: "FF0000" }
+  # pypi link intentionally omitted while pypi.enabled is false
