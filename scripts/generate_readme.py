@@ -207,6 +207,45 @@ def sec_hf(profile, models, datasets):
     return "\n".join(lines).strip()
 
 
+def sec_now(profile):
+    items = profile.get("now") or []
+    if not items:
+        return ""
+    lines = [
+        "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+        "",
+        "## Currently",
+        "",
+    ]
+    lines.extend(f"- {item}" for item in items)
+    return "\n".join(lines)
+
+
+def sec_highlights(profile):
+    items = profile.get("highlights") or []
+    if not items:
+        return ""
+    blocks = [
+        "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+        "",
+        "## Things I've built that I actually use",
+        "",
+    ]
+    for h in items:
+        name = esc_cell(h.get("name", ""))
+        desc = esc_cell(h.get("description", ""))
+        lang = h.get("lang", "")
+        code = (h.get("code") or "").rstrip()
+        blocks.append(
+            f"<details>\n"
+            f"<summary><kbd>{name}</kbd> — {desc}</summary>\n"
+            f"<br/>\n\n"
+            f"```{lang}\n{code}\n```\n\n"
+            f"</details>"
+        )
+    return "\n\n".join(blocks)
+
+
 def sec_last_updated(today):
     return (
         f'<p align="center"><sub>Last refreshed {today} · generated from '
@@ -250,6 +289,8 @@ def build_sections(profile, fetcher, today):
         "RECENT": sec_recent(profile, repos),
         "LANGUAGES": sec_languages(repos),
         "HUGGINGFACE": hf_section,
+        "NOW": sec_now(profile),
+        "HIGHLIGHTS": sec_highlights(profile),
         "LAST_UPDATED": sec_last_updated(today),
     }
 

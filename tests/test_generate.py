@@ -36,6 +36,8 @@ class GenerateReadmeTest(unittest.TestCase):
                 "RECENT": g.sec_recent(cls.profile, cls.repos),
                 "LANGUAGES": g.sec_languages(cls.repos),
                 "HUGGINGFACE": g.sec_hf(cls.profile, cls.models, cls.datasets),
+                "NOW": g.sec_now(cls.profile),
+                "HIGHLIGHTS": g.sec_highlights(cls.profile),
                 "LAST_UPDATED": g.sec_last_updated("2026-07-22"),
             },
         )
@@ -91,6 +93,38 @@ class GenerateReadmeTest(unittest.TestCase):
         self.assertEqual(g.trunc("short"), "short")
         self.assertTrue(g.trunc("x" * 200, 100).endswith("…"))
         self.assertLessEqual(len(g.trunc("x" * 200, 100)), 100)
+
+    def test_now_renders_when_items(self):
+        section = g.sec_now(self.profile)
+        self.assertIn("## Currently", section)
+        self.assertIn("Memory-spark", section)
+        self.assertIn("GSD-OC", section)
+
+    def test_now_hidden_when_empty(self):
+        bare = dict(self.profile)
+        bare["now"] = []
+        self.assertEqual(g.sec_now(bare), "")
+
+    def test_highlights_render_all_items(self):
+        section = g.sec_highlights(self.profile)
+        for h in self.profile["highlights"]:
+            self.assertIn(f"<kbd>{h['name']}</kbd>", section)
+            self.assertIn(h["description"], section)
+
+    def test_highlights_hidden_when_empty(self):
+        bare = dict(self.profile)
+        bare["highlights"] = []
+        self.assertEqual(g.sec_highlights(bare), "")
+
+    def test_highlights_open_with_details_tag(self):
+        section = g.sec_highlights(self.profile)
+        self.assertIn("<details>", section)
+        self.assertIn("</details>", section)
+        self.assertIn("```bash", section)
+
+    def test_pypi_hidden_with_now_and_highlights(self):
+        # Sanity: rendering still produces no PyPI content when disabled.
+        self.assertNotIn("pypi.org", self.output)
 
 
 if __name__ == "__main__":

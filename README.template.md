@@ -101,88 +101,9 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 {{HUGGINGFACE}}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{{NOW}}
 
-## Things I've built that I actually use
-
-<details>
-<summary><kbd>toralizer</kbd> — transparent Tor proxy for any program</summary>
-<br/>
-
-```bash
-$ toralizer curl https://ifconfig.me
-# → routes curl through Tor via LD_PRELOAD SOCKS5 hook
-# → no app config needed, works on anything dynamically linked
-
-$ toralizer wget https://example.com/file.tar.gz
-```
-
-</details>
-
-<details>
-<summary><kbd>lumos</kbd> — unified brightness control (laptop + external monitors)</summary>
-<br/>
-
-```bash
-$ lumos 70          # set laptop backlight to 70% via sysfs
-$ lumos --ddc 50    # set external monitor via DDC/CI protocol
-$ lumos             # show current brightness levels
-```
-
-</details>
-
-<details>
-<summary><kbd>quicknotes</kbd> — terminal sticky notes with VimWiki integration</summary>
-<br/>
-
-```bash
-$ quicknotes add "fix the lumos DDC edge case"
-$ quicknotes ls
-  [0] fix the lumos DDC edge case
-  [1] read more about libsodium streams
-
-$ quicknotes nb     # opens a VimWiki scratchpad in Neovim
-```
-
-</details>
-
-<details>
-<summary><kbd>OSLA</kbd> — offline LICENSE generator</summary>
-<br/>
-
-```bash
-$ osla MIT          # writes LICENSE with current year + git author
-$ osla --list       # show available license templates
-$ osla GPL-3.0
-```
-
-</details>
-
-<details>
-<summary><kbd>bx</kbd> — encrypted, resumable backups over SSH</summary>
-<br/>
-
-```bash
-$ bx client sync /home/klein user@server:/backups
-# → BLAKE3 hashed, libsodium encrypted, zstd compressed
-# → resumable, SQLite manifest, deduped
-
-$ bx server start   # run as a backup receive daemon
-```
-
-</details>
-
-<details>
-<summary><kbd>fblogin</kbd> — framebuffer display manager</summary>
-<br/>
-
-```bash
-# Replaces getty entirely — runs directly on /dev/fb0
-# PAM auth + fprintd fingerprint support
-# No X11, no Wayland, no display server needed at boot
-```
-
-</details>
+{{HIGHLIGHTS}}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

@@ -31,6 +31,67 @@ pypi:
   enabled: false
   packages: []
 
+# Curated "Things I've built that I actually use" entries. Each renders as
+# a <details> block with a one-line description and a code snippet.
+# Order = display order. Empty list = section hidden.
+highlights:
+  - name: toralizer
+    description: transparent Tor proxy for any program
+    lang: bash
+    code: |
+      $ toralizer curl https://ifconfig.me
+      # → routes curl through Tor via LD_PRELOAD SOCKS5 hook
+      # → no app config needed, works on anything dynamically linked
+
+      $ toralizer wget https://example.com/file.tar.gz
+  - name: lumos
+    description: unified brightness control (laptop + external monitors)
+    lang: bash
+    code: |
+      $ lumos 70          # set laptop backlight to 70% via sysfs
+      $ lumos --ddc 50    # set external monitor via DDC/CI protocol
+      $ lumos             # show current brightness levels
+  - name: quicknotes
+    description: terminal sticky notes with VimWiki integration
+    lang: bash
+    code: |
+      $ quicknotes add "fix the lumos DDC edge case"
+      $ quicknotes ls
+        [0] fix the lumos DDC edge case
+        [1] read more about libsodium streams
+
+      $ quicknotes nb     # opens a VimWiki scratchpad in Neovim
+  - name: OSLA
+    description: offline LICENSE generator
+    lang: bash
+    code: |
+      $ osla MIT          # writes LICENSE with current year + git author
+      $ osla --list       # show available license templates
+      $ osla GPL-3.0
+  - name: bx
+    description: encrypted, resumable backups over SSH
+    lang: bash
+    code: |
+      $ bx client sync /home/klein user@server:/backups
+      # → BLAKE3 hashed, libsodium encrypted, zstd compressed
+      # → resumable, SQLite manifest, deduped
+
+      $ bx server start   # run as a backup receive daemon
+  - name: fblogin
+    description: framebuffer display manager
+    lang: text
+    code: |
+      # Replaces getty entirely — runs directly on /dev/fb0
+      # PAM auth + fprintd fingerprint support
+      # No X11, no Wayland, no display server needed at boot
+
+# Current focus — renders as a "Currently" section above Things I've built.
+# Empty list = section hidden.
+now:
+  - "Memory-spark 15-stage RAG pipeline on DGX Spark"
+  - "GSD-OC lifecycle orchestration"
+  - "Kleinpanic profile README generator (this repo)"
+
 # Links row badges (shields.io, flat-square). Add/remove entries freely;
 # unknown handles should stay commented out, not guessed.
 links:
