@@ -10,7 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-import generate_readme as g  # noqa: E402
+import generate_readme as g
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 

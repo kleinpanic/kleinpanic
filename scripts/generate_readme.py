@@ -183,8 +183,10 @@ def sec_hf(profile, models, datasets):
     if not models and not datasets:
         return f"_No public assets under [{user}](https://huggingface.co/{user}) yet._"
     lines = [
-        f"Everything under [huggingface.co/{user}](https://huggingface.co/{user}), "
-        "refreshed weekly.",
+        (
+            f"Everything under [huggingface.co/{user}](https://huggingface.co/{user}), "
+            "refreshed weekly."
+        ),
         "",
     ]
     if models:
@@ -278,7 +280,7 @@ def build_sections(profile, fetcher, today):
         models = fetcher.hf_models(hf_user) if hf_user else []
         datasets = fetcher.hf_datasets(hf_user) if hf_user else []
         hf_section = sec_hf(profile, models, datasets)
-    except Exception as exc:  # an HF outage must not kill the whole regen
+    except requests.RequestException as exc:  # an HF outage must not kill the whole regen
         print(f"warning: Hugging Face fetch failed: {exc}", file=sys.stderr)
         hf_section = "_Hugging Face data temporarily unavailable._"
 
@@ -321,7 +323,7 @@ def main(argv=None):
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     profile = yaml.safe_load(PROFILE_PATH.read_text(encoding="utf-8"))
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
-    today = args.date or datetime.date.today().isoformat()
+    today = args.date or datetime.datetime.now(tz=datetime.timezone.utc).date().isoformat()
 
     fetcher = Fetcher(fixtures=args.fixtures, token=token)
     sections = build_sections(profile, fetcher, today)
