@@ -33,8 +33,11 @@ OUTPUT_PATH = ROOT / "README.md"
 
 GH_API = "https://api.github.com"
 HF_API = "https://huggingface.co/api"
+PYPI_API = "https://pypi.org/pypi"
+NPM_API = "https://registry.npmjs.org/-/v1/search"
 
 PLACEHOLDER = re.compile(r"\{\{([A-Z_]+)\}\}")
+DIVIDER = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
 
 def esc_cell(text):
@@ -101,6 +104,39 @@ class Fetcher:
             return self._fixture("hf_datasets.json")
         return self._get(f"{HF_API}/datasets?author={user}&limit=50")
 
+    def pypi_package(self, name):
+        """Fetch a single PyPI package's JSON metadata. Returns None on 404 or error."""
+        if self.fixtures:
+            fixture = self._fixture("pypi_packages.json")
+            return fixture.get(name)
+        try:
+            resp = requests.get(
+                f"{PYPI_API}/{name}/json",
+                headers={"User-Agent": "kleinpanic-readme-generator"},
+                timeout=30,
+            )
+            resp.raise_for_status()
+        except requests.RequestException as exc:
+            print(f"warning: PyPI fetch failed for {name}: {exc}", file=sys.stderr)
+            return None
+        return resp.json()
+
+    def npm_search(self, user):
+        """Search npm registry for packages authored by `user`."""
+        if self.fixtures:
+            return self._fixture("npm_search.json")
+        try:
+            resp = requests.get(
+                f"{NPM_API}?text=author:{user}&size=20",
+                headers={"User-Agent": "kleinpanic-readme-generator"},
+                timeout=30,
+            )
+            resp.raise_for_status()
+        except requests.RequestException as exc:
+            print(f"warning: npm fetch failed: {exc}", file=sys.stderr)
+            return {"objects": []}
+        return resp.json()
+
 
 def sec_links(profile):
     items = []
@@ -115,27 +151,46 @@ def sec_links(profile):
 
 
 def sec_stats(user_json, repos):
+    """Box-drawing stats panel matching the rest of the README's theme.
+
+    Returns a `<pre>` block with `┌─`/`└─` borders — same chrome the Setup
+    table uses. Drops the filler "public" / "across owned repos" qualifiers
+    that used to make the line read like a quarterly report.
+    """
     owned = [r for r in repos if not r.get("fork")]
     stars = sum(r.get("stargazers_count", 0) for r in owned)
-    return (
-        f"**{user_json.get('public_repos', len(owned))}** public repos · "
-        f"**{user_json.get('followers', 0)}** followers · "
-        f"**{stars}** stars across owned repos"
+    forks = sum(r.get("forks_count", 0) for r in owned)
+    user = user_json.get("login") or "github"
+    inner = (
+        f"  {user_json.get('public_repos', len(owned))} repos"
+        f"  ·  {user_json.get('followers', 0)} followers"
+        f"  ·  {stars}★"
+        f"  ·  {forks} forks  "
     )
+    label = f" {user} "
+    width = max(56, len(inner) + 2)
+    top_pad = width - 3 - len(label)
+    mid_pad = width - 2 - len(inner)
+    top = "┌─" + label + "─" * top_pad + "┐"
+    mid = "│" + inner + " " * mid_pad + "│"
+    bot = "└" + "─" * (width - 2) + "┘"
+    return f"<pre>\n{top}\n{mid}\n{bot}\n</pre>"
 
 
 def sec_featured(profile, repos):
     by_name = {r["name"]: r for r in repos}
-    rows = ["| Repo | About | ★ |", "| --- | --- | --- |"]
+    rows = ["| Repo | About | Lang | ★ |", "| --- | --- | --- | --- |"]
     missing = []
     for name in profile["github"].get("featured", []):
         repo = by_name.get(name)
         if repo is None:
             missing.append(name)
             continue
+        lang = (repo.get("language") or "—")[:6]
         rows.append(
             f"| [{name}]({repo['html_url']}) | "
-            f"{esc_cell(trunc(repo.get('description') or '—', 110))} | "
+            f"{esc_cell(trunc(repo.get('description') or '—', 95))} | "
+            f"{lang} | "
             f"{repo.get('stargazers_count', 0)} |"
         )
     if missing:
@@ -207,6 +262,84 @@ def sec_hf(profile, models, datasets):
                 f"{d.get('downloads', 0)} |"
             )
     return "\n".join(lines).strip()
+
+
+def sec_pypi(profile, fetcher):
+    """Render the PyPI section (heading + body) or empty string when disabled.
+
+    PyPI has no clean "list my packages" endpoint, so package names must be
+    listed explicitly in profile.yml. Each name is fetched individually from
+    /pypi/<name>/json; 404s are skipped with a warning so a renamed package
+    doesn't kill the whole regen.
+    """
+    cfg = profile.get("pypi") or {}
+    if not cfg.get("enabled"):
+        return ""
+    packages = cfg.get("packages") or []
+    if not packages:
+        return ""
+    rows = [
+        "All packages under [pypi.org/user/" + cfg.get("user", "") + "]"
+        f"(https://pypi.org/user/{cfg.get('user', '')}/), refreshed weekly.",
+        "",
+        "| Package | Version | About |",
+        "| --- | --- | --- |",
+    ]
+    rendered = 0
+    for entry in packages:
+        name = entry["name"] if isinstance(entry, dict) else entry
+        data = fetcher.pypi_package(name)
+        if not data:
+            continue
+        info = data.get("info") or {}
+        version = info.get("version", "")
+        summary = esc_cell(trunc(info.get("summary") or "—", 100))
+        rows.append(
+            f"| [{name}](https://pypi.org/project/{name}/) | "
+            f"{version} | {summary} |"
+        )
+        rendered += 1
+    if rendered == 0:
+        return ""
+    return f"{DIVIDER}\n\n## PyPI\n\n" + "\n".join(rows)
+
+
+def sec_npm(profile, fetcher):
+    """Render the npm section (heading + body) or empty string when disabled.
+
+    Uses the npm search API filtered by author. When the user has zero
+    packages, returns "" so the section stays hidden — better than an empty
+    divider.
+    """
+    cfg = profile.get("npm") or {}
+    if not cfg.get("enabled"):
+        return ""
+    user = cfg.get("user")
+    if not user:
+        return ""
+    data = fetcher.npm_search(user)
+    objects = data.get("objects") or []
+    if not objects:
+        return ""
+    limit = int(cfg.get("max_items", 5))
+    rows = [
+        f"Everything under [npmjs.com/~{user}](https://www.npmjs.com/~{user}),"
+        " refreshed weekly.",
+        "",
+        "| Package | Version | About | Weekly DL |",
+        "| --- | --- | --- | --- |",
+    ]
+    for obj in objects[:limit]:
+        pkg = obj.get("package") or {}
+        name = pkg.get("name", "")
+        version = pkg.get("version", "")
+        desc = esc_cell(trunc(pkg.get("description") or "—", 90))
+        dl = (obj.get("downloads") or {}).get("weekly", 0)
+        rows.append(
+            f"| [{name}](https://www.npmjs.com/package/{name}) | "
+            f"{version} | {desc} | {dl} |"
+        )
+    return f"{DIVIDER}\n\n## npm\n\n" + "\n".join(rows)
 
 
 def sec_now(profile):
@@ -291,6 +424,8 @@ def build_sections(profile, fetcher, today):
         "RECENT": sec_recent(profile, repos),
         "LANGUAGES": sec_languages(repos),
         "HUGGINGFACE": hf_section,
+        "PYPI": sec_pypi(profile, fetcher),
+        "NPM": sec_npm(profile, fetcher),
         "NOW": sec_now(profile),
         "HIGHLIGHTS": sec_highlights(profile),
         "LAST_UPDATED": sec_last_updated(today),

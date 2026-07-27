@@ -20,7 +20,7 @@
 
 {{LINKS}}
 
-<p>{{STATS}}</p>
+{{STATS}}
 </div>
 
 ```
@@ -100,6 +100,10 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 ## Hugging Face
 
 {{HUGGINGFACE}}
+
+{{PYPI}}
+
+{{NPM}}
 
 {{NOW}}
 

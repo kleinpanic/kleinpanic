@@ -26,10 +26,31 @@ huggingface:
   user: kleinpanic93
   max_items: 5
 
+# npm section — auto-fetches via registry search API when enabled.
+# Flip enabled: true once you publish your first package.
+npm:
+  enabled: false
+  user: kleinpanic
+  max_items: 5
+
 # PyPI section stays hidden until package names are confirmed.
+# PyPI has no clean "list my packages" endpoint, so packages are listed
+# explicitly here and each is fetched from /pypi/<name>/json.
 pypi:
   enabled: false
+  user: kleinpanic
   packages: []
+  # - name: my-package
+  # - name: another-package
+
+# Zenodo — uncomment + populate when you publish a dataset/release.
+# Generator support is not wired yet; this is just a TODO marker so we
+# remember the next integration to add. Drop the DOI list in when ready.
+# zenodo:
+#   enabled: false
+#   dois: []
+#     # - doi: 10.5281/zenodo.XXXXXXX
+#     #   title: my-dataset
 
 # Curated "Things I've built that I actually use" entries. Each renders as
 # a <details> block with a one-line description and a code snippet.
@@ -101,3 +122,4 @@ links:
   - { label: huggingface, text: kleinpanic93,       url: "https://huggingface.co/kleinpanic93", logo: huggingface, color: "FF9D00" }
   # - { label: youtube,   text: TODO-handle,        url: "https://youtube.com/@TODO",           logo: youtube,     color: "FF0000" }
   # pypi link intentionally omitted while pypi.enabled is false
+  # npm link intentionally omitted while npm.enabled is false

@@ -1,0 +1,21 @@
+{
+  "total": 2,
+  "objects": [
+    {
+      "package": {
+        "name": "kleinpanic-cli",
+        "version": "0.1.0",
+        "description": "CLI tool for kleinpanic tooling."
+      },
+      "downloads": {"weekly": 142, "monthly": 530}
+    },
+    {
+      "package": {
+        "name": "@kleinpanic/utils",
+        "version": "1.0.2",
+        "description": "Shared utilities."
+      },
+      "downloads": {"weekly": 7, "monthly": 31}
+    }
+  ]
+}
