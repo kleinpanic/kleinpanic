@@ -23,11 +23,12 @@
   <a href="https://git.kleinpanic.com"><img src="https://img.shields.io/badge/git-git.kleinpanic.com-609926?style=flat-square&logo=gitea&logoColor=white" /></a>
   <a href="https://github.com/kleinpanic"><img src="https://img.shields.io/badge/github-kleinpanic-181717?style=flat-square&logo=github&logoColor=white" /></a>
   <a href="https://huggingface.co/kleinpanic93"><img src="https://img.shields.io/badge/huggingface-kleinpanic93-FF9D00?style=flat-square&logo=huggingface&logoColor=white" /></a>
+  <a href="https://pypi.org/user/kleinpanic/"><img src="https://img.shields.io/badge/pypi-kleinpanic-3776AB?style=flat-square&logo=pypi&logoColor=white" /></a>
 </p>
 
 <pre>
 ┌─ kleinpanic ─────────────────────────────────────────┐
-│  61 repos  ·  12 followers  ·  23★  ·  2 forks       │
+│  61 repos  ·  11 followers  ·  23★  ·  0 forks       │
 └──────────────────────────────────────────────────────┘
 </pre>
 </div>
@@ -105,18 +106,18 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 | Repo | About | Last push |
 | --- | --- | --- |
-| [ups-orchestrator](https://github.com/kleinpanic/ups-orchestrator) | NUT-driven UPS power-event monitor with beautiful per-UPS Discord embeds (homelab, dual C… | 2026-07-28 |
-| [mission-control](https://github.com/kleinpanic/mission-control) | Real-time dashboard for monitoring and orchestrating OpenClaw agents. WebSocket-powered N… | 2026-07-28 |
-| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-07-27 |
-| [VTWebCatCLI](https://github.com/kleinpanic/VTWebCatCLI) | WebcatCLI is a Python-based WebCAT-style pre-submission checker for Java projects. It enf… | 2026-07-26 |
-| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings… | 2026-07-26 |
+| [ups-orchestrator](https://github.com/kleinpanic/ups-orchestrator) | NUT-driven UPS power-event monitor with beautiful per-UPS Discord embeds (homelab, dual C… | 2026-07-22 |
+| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-07-22 |
+| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings… | 2026-07-22 |
+| [mission-control](https://github.com/kleinpanic/mission-control) | Real-time dashboard for monitoring and orchestrating OpenClaw agents. WebSocket-powered N… | 2026-07-22 |
+| [shut-the-box-optimal-strategy](https://github.com/kleinpanic/shut-the-box-optimal-strategy) | Statistically optimal Shut the Box play assistant with dynamic programming engine | 2026-07-21 |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## Languages
 
-**Python** 19 · **C** 14 · **Shell** 9 · **TypeScript** 8 · **JavaScript** 4 · **HTML** 2  
-<sub>56 owned repos with a detected primary language</sub>
+**Python** 18 · **C** 14 · **Shell** 9 · **TypeScript** 8 · **JavaScript** 4 · **HTML** 2  
+<sub>55 owned repos with a detected primary language</sub>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -128,16 +129,16 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 
 | Model | Downloads | Likes |
 | --- | --- | --- |
-| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 10 | 1 |
-| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 469 | 1 |
-| [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 27 | 0 |
+| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 8 | 1 |
+| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 385 | 1 |
+| [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 16 | 0 |
 | [canvas-calendar-agent-v7-dpo-gguf](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo-gguf) | 0 | 0 |
 
 **Datasets**
 
 | Dataset | Downloads |
 | --- | --- |
-| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 25 |
+| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 10 |
 
 
 

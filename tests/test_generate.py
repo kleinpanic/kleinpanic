@@ -95,7 +95,13 @@ class GenerateReadmeTest(unittest.TestCase):
         self.assertEqual(len(lines[0]), len(lines[1]))
 
     def test_pypi_hidden(self):
-        self.assertNotIn("pypi.org", self.output)
+        # PyPI body section is disabled, but the LINKS-row badge is now
+        # intentionally present (links to pypi.org/user/kleinpanic).
+        self.assertNotIn("## PyPI", self.output)
+
+    def test_pypi_badge_in_links(self):
+        # The LINKS row should include the pypi.org/user/kleinpanic badge.
+        self.assertIn("pypi.org/user/kleinpanic", self.output)
 
     def test_links_skip_unconfigured(self):
         links = g.sec_links(self.profile)
@@ -139,8 +145,8 @@ class GenerateReadmeTest(unittest.TestCase):
         self.assertIn("```bash", section)
 
     def test_pypi_hidden_with_now_and_highlights(self):
-        # Sanity: rendering still produces no PyPI content when disabled.
-        self.assertNotIn("pypi.org", self.output)
+        # Sanity: rendering still produces no PyPI body content when disabled.
+        self.assertNotIn("## PyPI", self.output)
 
     def test_pypi_disabled_returns_empty(self):
         self.assertEqual(g.sec_pypi(self.profile, g.Fetcher(fixtures=FIXTURES)), "")

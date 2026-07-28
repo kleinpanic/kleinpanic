@@ -120,6 +120,7 @@ links:
   - { label: git,         text: git.kleinpanic.com, url: "https://git.kleinpanic.com",          logo: gitea,       color: "609926" }
   - { label: github,      text: kleinpanic,         url: "https://github.com/kleinpanic",       logo: github,      color: "181717" }
   - { label: huggingface, text: kleinpanic93,       url: "https://huggingface.co/kleinpanic93", logo: huggingface, color: "FF9D00" }
+  - { label: pypi,         text: kleinpanic,         url: "https://pypi.org/user/kleinpanic/",   logo: pypi,        color: "3776AB" }
   # - { label: youtube,   text: TODO-handle,        url: "https://youtube.com/@TODO",           logo: youtube,     color: "FF0000" }
-  # pypi link intentionally omitted while pypi.enabled is false
+  # - { label: zenodo,    text: TODO-handle,        url: "https://zenodo.org/search?q=metadata.creators.person_or_org.name:%22Klein%22", logo: zenodo, color: "3182C2" }
   # npm link intentionally omitted while npm.enabled is false
