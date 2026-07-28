@@ -25,7 +25,11 @@
   <a href="https://huggingface.co/kleinpanic93"><img src="https://img.shields.io/badge/huggingface-kleinpanic93-FF9D00?style=flat-square&logo=huggingface&logoColor=white" /></a>
 </p>
 
-<p>**61** public repos · **11** followers · **23** stars across owned repos</p>
+<pre>
+┌─ kleinpanic ─────────────────────────────────────────┐
+│  61 repos  ·  12 followers  ·  23★  ·  2 forks       │
+└──────────────────────────────────────────────────────┘
+</pre>
 </div>
 
 ```
@@ -84,14 +88,14 @@ curl https://kleinpanic.com/ip     # check your public IP
 
 ## Featured Projects
 
-| Repo | About | ★ |
-| --- | --- | --- |
-| [fblogin](https://github.com/kleinpanic/fblogin) | fblogin is a lightweight, framebuffer-based login manager for Debian. It replaces tty1 with a graphical UI, l… | 2 |
-| [toralizer](https://github.com/kleinpanic/toralizer) | Toralizer is a small, LD_PRELOAD-based tool that intercepts a program’s outgoing network connections and rout… | 1 |
-| [GSD-OC](https://github.com/kleinpanic/GSD-OC) | GSD lifecycle orchestration as a native OpenClaw plugin — enforced research→plan→execute→verify→ship, hybrid… | 1 |
-| [lumos](https://github.com/kleinpanic/lumos) | Lumos—cross-platform CLI for backlight brightness control. Supports internal panels via sysfs and external DD… | 1 |
-| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings. Self-hosted on NVI… | 2 |
-| [mission-control](https://github.com/kleinpanic/mission-control) | Real-time dashboard for monitoring and orchestrating OpenClaw agents. WebSocket-powered Next.js app with agen… | 0 |
+| Repo | About | Lang | ★ |
+| --- | --- | --- | --- |
+| [fblogin](https://github.com/kleinpanic/fblogin) | fblogin is a lightweight, framebuffer-based login manager for Debian. It replaces tty1 with a… | C | 2 |
+| [toralizer](https://github.com/kleinpanic/toralizer) | Toralizer is a small, LD_PRELOAD-based tool that intercepts a program’s outgoing network conne… | C | 1 |
+| [GSD-OC](https://github.com/kleinpanic/GSD-OC) | GSD lifecycle orchestration as a native OpenClaw plugin — enforced research→plan→execute→verif… | TypeSc | 1 |
+| [lumos](https://github.com/kleinpanic/lumos) | Lumos—cross-platform CLI for backlight brightness control. Supports internal panels via sysfs… | C | 1 |
+| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings. Sel… | TypeSc | 2 |
+| [mission-control](https://github.com/kleinpanic/mission-control) | Real-time dashboard for monitoring and orchestrating OpenClaw agents. WebSocket-powered Next.j… | TypeSc | 0 |
 
 Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpanic?tab=repositories) · retired work: [Archived](https://github.com/kleinpanic/Archived)
 
@@ -101,11 +105,11 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 | Repo | About | Last push |
 | --- | --- | --- |
-| [ups-orchestrator](https://github.com/kleinpanic/ups-orchestrator) | NUT-driven UPS power-event monitor with beautiful per-UPS Discord embeds (homelab, dual C… | 2026-07-26 |
-| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-07-26 |
+| [ups-orchestrator](https://github.com/kleinpanic/ups-orchestrator) | NUT-driven UPS power-event monitor with beautiful per-UPS Discord embeds (homelab, dual C… | 2026-07-28 |
+| [mission-control](https://github.com/kleinpanic/mission-control) | Real-time dashboard for monitoring and orchestrating OpenClaw agents. WebSocket-powered N… | 2026-07-28 |
+| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-07-27 |
 | [VTWebCatCLI](https://github.com/kleinpanic/VTWebCatCLI) | WebcatCLI is a Python-based WebCAT-style pre-submission checker for Java projects. It enf… | 2026-07-26 |
 | [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings… | 2026-07-26 |
-| [mission-control](https://github.com/kleinpanic/mission-control) | Real-time dashboard for monitoring and orchestrating OpenClaw agents. WebSocket-powered N… | 2026-07-25 |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -124,8 +128,8 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 
 | Model | Downloads | Likes |
 | --- | --- | --- |
-| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 11 | 1 |
-| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 463 | 1 |
+| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 10 | 1 |
+| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 469 | 1 |
 | [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 27 | 0 |
 | [canvas-calendar-agent-v7-dpo-gguf](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo-gguf) | 0 | 0 |
 
@@ -134,6 +138,10 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 | Dataset | Downloads |
 | --- | --- |
 | [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 25 |
+
+
+
+
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -244,7 +252,7 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<p align="center"><sub>Last refreshed 2026-07-27 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
+<p align="center"><sub>Last refreshed 2026-07-28 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=80&section=footer" />
