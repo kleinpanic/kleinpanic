@@ -28,7 +28,7 @@
 
 <pre>
 ┌─ kleinpanic ─────────────────────────────────────────┐
-│  61 repos  ·  12 followers  ·  23★  ·  2 forks       │
+│  61 repos  ·  12 followers  ·  24★  ·  2 forks       │
 └──────────────────────────────────────────────────────┘
 </pre>
 </div>
@@ -93,7 +93,7 @@ curl https://kleinpanic.com/ip     # check your public IP
 | --- | --- | --- | --- |
 | [fblogin](https://github.com/kleinpanic/fblogin) | fblogin is a lightweight, framebuffer-based login manager for Debian. It replaces tty1 with a… | C | 2 |
 | [toralizer](https://github.com/kleinpanic/toralizer) | Toralizer is a small, LD_PRELOAD-based tool that intercepts a program’s outgoing network conne… | C | 1 |
-| [GSD-OC](https://github.com/kleinpanic/GSD-OC) | GSD lifecycle orchestration as a native OpenClaw plugin — enforced research→plan→execute→verif… | TypeSc | 1 |
+| [GSD-OC](https://github.com/kleinpanic/GSD-OC) | GSD lifecycle orchestration as a native OpenClaw plugin — enforced research→plan→execute→verif… | TypeSc | 2 |
 | [lumos](https://github.com/kleinpanic/lumos) | Lumos—cross-platform CLI for backlight brightness control. Supports internal panels via sysfs… | C | 1 |
 | [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings. Sel… | TypeSc | 2 |
 | [mission-control](https://github.com/kleinpanic/mission-control) | Real-time dashboard for monitoring and orchestrating OpenClaw agents. WebSocket-powered Next.j… | TypeSc | 0 |
@@ -106,8 +106,8 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 | Repo | About | Last push |
 | --- | --- | --- |
-| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-07-28 |
-| [ups-orchestrator](https://github.com/kleinpanic/ups-orchestrator) | NUT-driven UPS power-event monitor with beautiful per-UPS Discord embeds (homelab, dual C… | 2026-07-28 |
+| [ups-orchestrator](https://github.com/kleinpanic/ups-orchestrator) | NUT-driven UPS power-event monitor with beautiful per-UPS Discord embeds (homelab, dual C… | 2026-07-30 |
+| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-07-29 |
 | [mission-control](https://github.com/kleinpanic/mission-control) | Real-time dashboard for monitoring and orchestrating OpenClaw agents. WebSocket-powered N… | 2026-07-28 |
 | [VTWebCatCLI](https://github.com/kleinpanic/VTWebCatCLI) | WebcatCLI is a Python-based WebCAT-style pre-submission checker for Java projects. It enf… | 2026-07-26 |
 | [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings… | 2026-07-26 |
@@ -253,7 +253,7 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<p align="center"><sub>Last refreshed 2026-07-28 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
+<p align="center"><sub>Last refreshed 2026-07-30 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=80&section=footer" />

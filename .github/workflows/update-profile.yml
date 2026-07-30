@@ -14,9 +14,16 @@ on:
       - tests/**
       - .github/workflows/update-profile.yml
 
-# Prevent overlapping runs (cron + manual push) from clobbering each other.
+# Two concurrency groups so cron + manual pushes never kill each other.
+# - cron-profile: only one cron run in flight; older cron runs get cancelled.
+# - push-profile: only one push-triggered run in flight; older pushes get
+#   cancelled (so back-to-back pushes don't pile up).
+# Previously these shared one group ("update-profile" with
+# cancel-in-progress: true). That meant a Monday 04:23 UTC cron could
+# cancel an in-progress push-triggered regen (or vice-versa) and leave the
+# README in a partially-regenerated state — see commit 3d3aacb.
 concurrency:
-  group: update-profile
+  group: ${{ github.event_name == 'schedule' && 'cron-profile' || 'push-profile' }}
   cancel-in-progress: true
 
 permissions:
@@ -60,18 +67,33 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
+      # Cron guard: if a human (or another workflow run) just touched
+      # README.md, the cron must NOT overwrite that. workflow_dispatch and
+      # push runs skip this guard — they always run.
+      - name: Skip if README was edited in the last 30 minutes
+        id: freshness_check
+        if: github.event_name == 'schedule'
+        run: |
+          AGE_MIN=$(( ( $(date +%s) - $(git log -1 --format=%ct README.md) ) / 60 ))
+          echo "README.md last touched ${AGE_MIN} minutes ago"
+          if [ "$AGE_MIN" -lt 30 ]; then
+            echo "skip=README too fresh — deferring to the more recent edit" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=ok" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Regenerate README
+        if: steps.freshness_check.outputs.skip != 'README too fresh — deferring to the more recent edit'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/generate_readme.py
 
       - name: Regenerate README (retry on flake)
-        # If GitHub or HF rate-limited the first attempt, one more retry
-        # covers the common transient case without a full cron rewrite.
-        if: failure()
+        if: failure() && steps.freshness_check.outputs.skip != 'README too fresh — deferring to the more recent edit'
         run: python3 scripts/generate_readme.py
 
       - name: Commit only if output changed
+        if: steps.freshness_check.outputs.skip != 'README too fresh — deferring to the more recent edit'
         run: |
           if git diff --quiet README.md; then
             echo "README unchanged — nothing to commit"
