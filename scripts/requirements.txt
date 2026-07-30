@@ -1,2 +1,7 @@
 pyyaml>=6,<7
 requests>=2.28,<3
+
+# Lint dep, pinned. Newer ruff releases have been flagging ISC004/etc.
+# even on code that previously passed — pinning to the version we test
+# locally avoids surprise CI failures from a fresh `pip install ruff`.
+ruff==0.15.5

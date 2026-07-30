@@ -46,7 +46,9 @@ jobs:
 
       - name: Lint with ruff
         run: |
-          pip install ruff
+          # ruff is pinned in scripts/requirements.txt to avoid surprise CI
+          # failures from a fresh `pip install ruff` pulling a newer version
+          # with new rules.
           ruff check scripts/ tests/
 
       - name: Run offline tests (fixtures)

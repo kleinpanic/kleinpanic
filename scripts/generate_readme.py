@@ -323,8 +323,7 @@ def sec_npm(profile, fetcher):
         return ""
     limit = int(cfg.get("max_items", 5))
     rows = [
-        f"Everything under [npmjs.com/~{user}](https://www.npmjs.com/~{user}),"
-        " refreshed weekly.",
+        f"Everything under [npmjs.com/~{user}](https://www.npmjs.com/~{user}), refreshed weekly.",
         "",
         "| Package | Version | About | Weekly DL |",
         "| --- | --- | --- | --- |",
