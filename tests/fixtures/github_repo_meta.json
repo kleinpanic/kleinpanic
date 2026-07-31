@@ -1,0 +1,43 @@
+{
+  "fblogin": {
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v1.0.0",
+      "url": "https://github.com/kleinpanic/fblogin/releases/tag/v1.0.0"
+    }
+  },
+  "toralizer": {
+    "license": "MIT",
+    "latest_release": null
+  },
+  "GSD-OC": {
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.4.2",
+      "url": "https://github.com/kleinpanic/GSD-OC/releases/tag/v0.4.2"
+    }
+  },
+  "lumos": {
+    "license": "GPL-3.0",
+    "latest_release": null
+  },
+  "memory-spark": {
+    "license": "Apache-2.0",
+    "latest_release": {
+      "tag": "v0.2.0",
+      "url": "https://github.com/kleinpanic/memory-spark/releases/tag/v0.2.0"
+    }
+  },
+  "mission-control": {
+    "license": null,
+    "latest_release": null
+  },
+  "no-license-repo": {
+    "license": null,
+    "latest_release": null
+  },
+  "no-release-repo": {
+    "license": "MIT",
+    "latest_release": null
+  }
+}

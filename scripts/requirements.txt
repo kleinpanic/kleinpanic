@@ -1,7 +1,10 @@
 pyyaml>=6,<7
 requests>=2.28,<3
 
-# Lint dep, pinned. Newer ruff releases have been flagging ISC004/etc.
-# even on code that previously passed — pinning to the version we test
-# locally avoids surprise CI failures from a fresh `pip install ruff`.
+# Lint deps, pinned.
+# - ruff: new releases keep flagging ISC004/etc. even on code that previously
+#   passed — pinning to the version we test locally avoids surprise CI
+#   failures from a fresh `pip install ruff`.
+# - markdownlint-cli2: pinned via npm in the lint workflow, not pip — kept
+#   here for parity with how the original lockstep worked.
 ruff==0.15.5
