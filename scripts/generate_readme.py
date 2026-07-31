@@ -2,23 +2,29 @@
 """Regenerate README.md from README.template.md + profile.yml with live API data.
 
 Data sources:
-  - GitHub REST API (user stats + repo list). Token optional via GITHUB_TOKEN
-    or GH_TOKEN; unauthenticated works but is rate-limited to 60 req/hr.
+  - GitHub REST API (user stats + repo list + per-repo license + latest
+    release). Token optional via GITHUB_TOKEN or GH_TOKEN; unauthenticated
+    works but is rate-limited to 60 req/hr.
   - Hugging Face public API (models + datasets for the configured author).
+  - PyPI JSON API (one call per package listed in profile.yml).
+  - npm registry search API (filtered by author).
 
 Usage:
   python3 scripts/generate_readme.py                              # live fetch, write README.md
   python3 scripts/generate_readme.py --check                      # exit 1 if README.md is stale
   python3 scripts/generate_readme.py --fixtures tests/fixtures    # offline, no network
+  python3 scripts/generate_readme.py --no-cache                   # bypass the 24h response cache
 """
 from __future__ import annotations
 
 import argparse
 import datetime
+import hashlib
 import json
 import os
 import re
 import sys
+import time
 from collections import Counter
 from pathlib import Path
 from urllib.parse import quote
@@ -30,6 +36,8 @@ ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE_PATH = ROOT / "README.template.md"
 PROFILE_PATH = ROOT / "profile.yml"
 OUTPUT_PATH = ROOT / "README.md"
+CACHE_DIR = ROOT / ".cache" / "api"
+CACHE_TTL_SECONDS = 24 * 60 * 60  # 24h — README regens weekly, so this is safe.
 
 GH_API = "https://api.github.com"
 HF_API = "https://huggingface.co/api"
@@ -38,6 +46,13 @@ NPM_API = "https://registry.npmjs.org/-/v1/search"
 
 PLACEHOLDER = re.compile(r"\{\{([A-Z_]+)\}\}")
 DIVIDER = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+DEFAULT_USER_AGENT = "kleinpanic-readme-generator"
+
+# Per-call timeout for any single API request. 30s is enough for normal
+# responses; longer than that and we want to fail fast and let the
+# error-isolation layer print a warning + fall back.
+REQUEST_TIMEOUT = 30
 
 
 def esc_cell(text):
@@ -52,26 +67,68 @@ def trunc(text, limit=100):
     return text[: limit - 1].rstrip() + "…"
 
 
-class Fetcher:
-    """Reads API data either live (HTTP) or offline from a fixtures directory."""
+def cache_key(url):
+    """Stable cache filename from a URL — sha256 of the URL string."""
+    return hashlib.sha256(url.encode("utf-8")).hexdigest() + ".json"
 
-    def __init__(self, fixtures=None, token=None):
+
+class Fetcher:
+    """Reads API data either live (HTTP) or offline from a fixtures directory.
+
+    Live requests are routed through `_get_cached`, which honours a per-URL
+    24h on-disk cache under ``.cache/api/``. The cache is bypassed when
+    ``--no-cache`` is passed or when ``self.fixtures`` is set (offline mode
+    always reads from fixtures, no disk cache).
+    """
+
+    def __init__(self, fixtures=None, token=None, use_cache=True):
         self.fixtures = Path(fixtures) if fixtures else None
         self.token = token
+        self.use_cache = use_cache and self.fixtures is None
 
     def _fixture(self, name):
         return json.loads((self.fixtures / name).read_text(encoding="utf-8"))
 
+    def _cache_path(self, url):
+        return CACHE_DIR / cache_key(url)
+
+    def _read_cache(self, url):
+        path = self._cache_path(url)
+        if not path.exists():
+            return None
+        age = time.time() - path.stat().st_mtime
+        if age > CACHE_TTL_SECONDS:
+            return None
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return None
+
+    def _write_cache(self, url, payload):
+        if not self.use_cache:
+            return
+        path = self._cache_path(url)
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+        except OSError as exc:
+            print(f"warning: cache write failed for {url}: {exc}", file=sys.stderr)
+
     def _get(self, url):
         headers = {
             "Accept": "application/vnd.github+json",
-            "User-Agent": "kleinpanic-readme-generator",
+            "User-Agent": DEFAULT_USER_AGENT,
         }
         if self.token:
             headers["Authorization"] = f"Bearer {self.token}"
-        resp = requests.get(url, headers=headers, timeout=30)
+        cached = self._read_cache(url)
+        if cached is not None:
+            return cached
+        resp = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
         resp.raise_for_status()
-        return resp.json()
+        payload = resp.json()
+        self._write_cache(url, payload)
+        return payload
 
     def github_user(self, user):
         if self.fixtures:
@@ -94,6 +151,59 @@ class Fetcher:
             page += 1
         return repos
 
+    def github_repo_license(self, owner, repo):
+        """Return the SPDX license key for a repo, or None on 404/error.
+
+        The GitHub /license endpoint returns 404 for repos without a
+        detectable license. Treat that as "no license" rather than a hard
+        failure so the Featured table still renders.
+        """
+        url = f"{GH_API}/repos/{owner}/{repo}/license"
+        if self.fixtures:
+            # Fixtures keyed by repo name; tests can populate what they need.
+            fixture = self._fixture("github_repo_meta.json")
+            return fixture.get(repo, {}).get("license")
+        try:
+            data = self._get(url)
+        except requests.HTTPError as exc:
+            if exc.response is not None and exc.response.status_code == 404:
+                return None
+            raise
+        return (data.get("license") or {}).get("spdx_id")
+
+    def github_repo_latest_release(self, owner, repo):
+        """Return (tag_name, html_url) for the latest release, or (None, None).
+
+        Returns (None, None) when there are no releases, when the repo is
+        private/404, or on any transient network failure — never raises.
+        Used as an optional column in the Featured table.
+        """
+        url = f"{GH_API}/repos/{owner}/{repo}/releases/latest"
+        if self.fixtures:
+            fixture = self._fixture("github_repo_meta.json")
+            entry = fixture.get(repo, {}).get("latest_release") or {}
+            return entry.get("tag"), entry.get("url")
+        try:
+            data = self._get(url)
+        except requests.HTTPError as exc:
+            # 404 means "no releases" — normal for unreleased repos.
+            if exc.response is not None and exc.response.status_code == 404:
+                return (None, None)
+            # Anything else is a transient failure — log + return nothing
+            # rather than blowing up the regen for a single repo.
+            print(
+                f"warning: latest-release fetch failed for {repo}: {exc}",
+                file=sys.stderr,
+            )
+            return (None, None)
+        except requests.RequestException as exc:
+            print(
+                f"warning: latest-release fetch failed for {repo}: {exc}",
+                file=sys.stderr,
+            )
+            return (None, None)
+        return (data.get("tag_name"), data.get("html_url"))
+
     def hf_models(self, user):
         if self.fixtures:
             return self._fixture("hf_models.json")
@@ -112,8 +222,8 @@ class Fetcher:
         try:
             resp = requests.get(
                 f"{PYPI_API}/{name}/json",
-                headers={"User-Agent": "kleinpanic-readme-generator"},
-                timeout=30,
+                headers={"User-Agent": DEFAULT_USER_AGENT},
+                timeout=REQUEST_TIMEOUT,
             )
             resp.raise_for_status()
         except requests.RequestException as exc:
@@ -128,14 +238,37 @@ class Fetcher:
         try:
             resp = requests.get(
                 f"{NPM_API}?text=author:{user}&size=20",
-                headers={"User-Agent": "kleinpanic-readme-generator"},
-                timeout=30,
+                headers={"User-Agent": DEFAULT_USER_AGENT},
+                timeout=REQUEST_TIMEOUT,
             )
             resp.raise_for_status()
         except requests.RequestException as exc:
             print(f"warning: npm fetch failed: {exc}", file=sys.stderr)
             return {"objects": []}
         return resp.json()
+
+
+# ---------------------------------------------------------------------------
+# Section renderers. Each one returns the Markdown body for its placeholder.
+# The build_sections() wrapper calls them through ``safe_section`` so a
+# single failure cannot poison the whole README.
+# ---------------------------------------------------------------------------
+
+
+def safe_section(name, fn, *args, fallback=None, **kwargs):
+    """Run a section renderer; on any exception, log + return a fallback.
+
+    The goal is "the README always regenerates" — even when Hugging Face is
+    down, GitHub is rate-limiting us, or a featured repo was renamed. Each
+    fallback string tells the reader what they're missing instead of just
+    vanishing the section.
+    """
+    try:
+        result = fn(*args, **kwargs)
+        return result if result else (fallback or "")
+    except Exception as exc:  # noqa: BLE001 — intentional broad catch
+        print(f"warning: section '{name}' failed: {exc}", file=sys.stderr)
+        return fallback or f"_{name} data temporarily unavailable._"
 
 
 def sec_links(profile):
@@ -177,22 +310,71 @@ def sec_stats(user_json, repos):
     return f"<pre>\n{top}\n{mid}\n{bot}\n</pre>"
 
 
-def sec_featured(profile, repos):
+def sec_featured(profile, repos, fetcher=None):
+    """Featured repos table. With a fetcher, adds License + Latest release columns."""
     by_name = {r["name"]: r for r in repos}
-    rows = ["| Repo | About | Lang | ★ |", "| --- | --- | --- | --- |"]
     missing = []
+    rows_data = []
     for name in profile["github"].get("featured", []):
         repo = by_name.get(name)
         if repo is None:
             missing.append(name)
             continue
+        license_key = None
+        latest = (None, None)
+        if fetcher is not None:
+            try:
+                license_key = fetcher.github_repo_license(repo["owner"]["login"], name)
+            except Exception as exc:  # noqa: BLE001 — per-repo, don't kill section
+                print(
+                    f"warning: license fetch failed for {name}: {exc}",
+                    file=sys.stderr,
+                )
+            try:
+                latest = fetcher.github_repo_latest_release(
+                    repo["owner"]["login"], name
+                )
+            except Exception as exc:  # noqa: BLE001
+                print(
+                    f"warning: latest-release fetch failed for {name}: {exc}",
+                    file=sys.stderr,
+                )
+        rows_data.append((name, repo, license_key, latest))
+
+    has_meta = fetcher is not None and bool(rows_data)
+    if has_meta:
+        header = "| Repo | About | Lang | License | Latest | ★ |"
+        sep = "| --- | --- | --- | --- | --- | --- |"
+    else:
+        header = "| Repo | About | Lang | ★ |"
+        sep = "| --- | --- | --- | --- |"
+    rows = [header, sep]
+    for name, repo, license_key, latest in rows_data:
         lang = (repo.get("language") or "—")[:6]
-        rows.append(
-            f"| [{name}]({repo['html_url']}) | "
-            f"{esc_cell(trunc(repo.get('description') or '—', 95))} | "
-            f"{lang} | "
-            f"{repo.get('stargazers_count', 0)} |"
-        )
+        if has_meta:
+            license_cell = license_key or "—"
+            tag, url = latest
+            if tag and url:
+                # Shorten tag like "v1.2.3" → "1.2.3" for table fit.
+                short = tag.lstrip("v")
+                latest_cell = f"[{short}]({url})"
+            else:
+                latest_cell = "—"
+            rows.append(
+                f"| [{name}]({repo['html_url']}) | "
+                f"{esc_cell(trunc(repo.get('description') or '—', 80))} | "
+                f"{lang} | "
+                f"{license_cell} | "
+                f"{latest_cell} | "
+                f"{repo.get('stargazers_count', 0)} |"
+            )
+        else:
+            rows.append(
+                f"| [{name}]({repo['html_url']}) | "
+                f"{esc_cell(trunc(repo.get('description') or '—', 95))} | "
+                f"{lang} | "
+                f"{repo.get('stargazers_count', 0)} |"
+            )
     if missing:
         print(
             f"warning: featured repos not found on GitHub: {', '.join(missing)}",
@@ -403,30 +585,59 @@ def render(template, sections):
 
 
 def build_sections(profile, fetcher, today):
+    """Build the section dict with per-section error isolation.
+
+    One section failing (Hugging Face down, GitHub rate-limited, a featured
+    repo renamed) must NOT prevent the rest of the README from regenerating.
+
+    The two foundational GitHub fetches (user + repos) feed most other
+    sections. If they fail we substitute minimal skeleton data so the
+    downstream sections can still render — rather than crashing the regen
+    before safe_section ever gets a chance to wrap anything.
+    """
     gh_user = profile["github"]["user"]
-    user_json = fetcher.github_user(gh_user)
-    repos = fetcher.github_repos(gh_user)
+
+    try:
+        user_json = fetcher.github_user(gh_user)
+    except Exception as exc:  # noqa: BLE001
+        print(f"warning: github_user fetch failed: {exc}", file=sys.stderr)
+        user_json = {
+            "login": gh_user,
+            "public_repos": 0,
+            "followers": 0,
+        }
+
+    try:
+        repos = fetcher.github_repos(gh_user)
+    except Exception as exc:  # noqa: BLE001
+        print(f"warning: github_repos fetch failed: {exc}", file=sys.stderr)
+        repos = []
 
     hf_user = (profile.get("huggingface") or {}).get("user")
-    try:
-        models = fetcher.hf_models(hf_user) if hf_user else []
-        datasets = fetcher.hf_datasets(hf_user) if hf_user else []
-        hf_section = sec_hf(profile, models, datasets)
-    except requests.RequestException as exc:  # an HF outage must not kill the whole regen
-        print(f"warning: Hugging Face fetch failed: {exc}", file=sys.stderr)
-        hf_section = "_Hugging Face data temporarily unavailable._"
+    if hf_user:
+        try:
+            models = fetcher.hf_models(hf_user)
+            datasets = fetcher.hf_datasets(hf_user)
+            hf_section = sec_hf(profile, models, datasets)
+        except Exception as exc:  # noqa: BLE001
+            print(f"warning: Hugging Face fetch failed: {exc}", file=sys.stderr)
+            hf_section = "_Hugging Face data temporarily unavailable._"
+    else:
+        hf_section = sec_hf(profile, [], [])
 
     return {
-        "LINKS": sec_links(profile),
-        "STATS": sec_stats(user_json, repos),
-        "FEATURED": sec_featured(profile, repos),
-        "RECENT": sec_recent(profile, repos),
-        "LANGUAGES": sec_languages(repos),
+        "LINKS": safe_section("links", sec_links, profile, fallback=""),
+        "STATS": safe_section("stats", sec_stats, user_json, repos),
+        "FEATURED": safe_section(
+            "featured", sec_featured, profile, repos, fetcher=fetcher
+        ),
+        "RECENT": safe_section("recent", sec_recent, profile, repos),
+        "LANGUAGES": safe_section("languages", sec_languages, repos),
         "HUGGINGFACE": hf_section,
-        "PYPI": sec_pypi(profile, fetcher),
-        "NPM": sec_npm(profile, fetcher),
-        "NOW": sec_now(profile),
-        "HIGHLIGHTS": sec_highlights(profile),
+        "PYPI": safe_section("pypi", sec_pypi, profile, fetcher, fallback=""),
+        "NPM": safe_section("npm", sec_npm, profile, fetcher, fallback=""),
+        "NOW": safe_section("now", sec_now, profile, fallback=""),
+        "HIGHLIGHTS": safe_section("highlights", sec_highlights, profile, fallback=""),
         "LAST_UPDATED": sec_last_updated(today),
     }
 
@@ -452,6 +663,17 @@ def main(argv=None):
         default=None,
         help="override the 'last refreshed' date (used by tests)",
     )
+    parser.add_argument(
+        "--no-cache",
+        action="store_true",
+        help="bypass the 24h on-disk API response cache (useful for testing)",
+    )
+    parser.add_argument(
+        "--cache-ttl",
+        type=int,
+        default=CACHE_TTL_SECONDS,
+        help="override cache TTL in seconds (used by tests)",
+    )
     args = parser.parse_args(argv)
 
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
@@ -459,7 +681,9 @@ def main(argv=None):
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
     today = args.date or datetime.datetime.now(tz=datetime.timezone.utc).date().isoformat()
 
-    fetcher = Fetcher(fixtures=args.fixtures, token=token)
+    fetcher = Fetcher(
+        fixtures=args.fixtures, token=token, use_cache=not args.no_cache
+    )
     sections = build_sections(profile, fetcher, today)
     rendered = render(template, sections)
 

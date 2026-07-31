@@ -6,7 +6,10 @@
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2026-07-22T23:04:14Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "CS3704-Canvas-Project",
@@ -15,7 +18,10 @@
     "stargazers_count": 1,
     "language": "Python",
     "pushed_at": "2026-07-22T08:10:09Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "memory-spark",
@@ -24,7 +30,10 @@
     "stargazers_count": 2,
     "language": "TypeScript",
     "pushed_at": "2026-07-22T06:05:56Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "mission-control",
@@ -33,7 +42,10 @@
     "stargazers_count": 0,
     "language": "TypeScript",
     "pushed_at": "2026-07-22T01:12:43Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "shut-the-box-optimal-strategy",
@@ -42,7 +54,10 @@
     "stargazers_count": 0,
     "language": "TypeScript",
     "pushed_at": "2026-07-21T16:12:02Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "TermChroma",
@@ -51,7 +66,10 @@
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2026-07-21T15:34:26Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "oc-config-gate",
@@ -60,7 +78,10 @@
     "stargazers_count": 0,
     "language": "TypeScript",
     "pushed_at": "2026-07-21T15:22:06Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "Archived",
@@ -69,7 +90,10 @@
     "stargazers_count": 0,
     "language": "C",
     "pushed_at": "2026-07-21T12:30:08Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "tone_generator",
@@ -78,7 +102,10 @@
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2026-07-21T10:37:11Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "File-Transfer-Website",
@@ -87,16 +114,22 @@
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2026-07-21T10:20:06Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "datahall",
     "html_url": "https://github.com/kleinpanic/datahall",
-    "description": "An interactive educational museum of database internals — storage engines, concurrency, indexing. Astro static site.",
+    "description": "An interactive educational museum of database internals \u2014 storage engines, concurrency, indexing. Astro static site.",
     "stargazers_count": 0,
     "language": "TypeScript",
     "pushed_at": "2026-07-21T00:20:44Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "xrandrw",
@@ -105,7 +138,10 @@
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2026-07-20T04:38:24Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "alarm-pi",
@@ -114,7 +150,10 @@
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2026-07-18T03:39:52Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "maze_solver",
@@ -123,7 +162,10 @@
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2026-07-16T18:05:10Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "Monoprice-MP10-V72-Y-Boundary-Firmware-Patch",
@@ -132,7 +174,10 @@
     "stargazers_count": 1,
     "language": "C",
     "pushed_at": "2026-07-15T04:09:48Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "translator",
@@ -141,7 +186,10 @@
     "stargazers_count": 0,
     "language": "Shell",
     "pushed_at": "2026-07-10T23:43:19Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "oc-tasks",
@@ -150,7 +198,10 @@
     "stargazers_count": 1,
     "language": "HTML",
     "pushed_at": "2026-06-29T03:14:37Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "oc-twilio-voice",
@@ -159,16 +210,22 @@
     "stargazers_count": 0,
     "language": "TypeScript",
     "pushed_at": "2026-06-24T01:55:58Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "GSD-OC",
     "html_url": "https://github.com/kleinpanic/GSD-OC",
-    "description": "GSD lifecycle orchestration as a native OpenClaw plugin — enforced research→plan→execute→verify→ship, hybrid retrieval, 0 Discord slots",
+    "description": "GSD lifecycle orchestration as a native OpenClaw plugin \u2014 enforced research\u2192plan\u2192execute\u2192verify\u2192ship, hybrid retrieval, 0 Discord slots",
     "stargazers_count": 1,
     "language": "TypeScript",
     "pushed_at": "2026-06-22T00:25:21Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "bluebubbles-mcp",
@@ -177,34 +234,46 @@
     "stargazers_count": 0,
     "language": "JavaScript",
     "pushed_at": "2026-06-20T02:49:51Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "VTWebCatCLI",
     "html_url": "https://github.com/kleinpanic/VTWebCatCLI",
-    "description": "WebcatCLI is a Python-based WebCAT-style pre-submission checker for Java projects. It enforces coding and Javadoc rules, runs JUnit tests with configurable assertions, auto-generates a minimal Maven POM, and verifies 100% method and branch coverage—with an optional `--run-main` mode. This is all based on the Virginia Tech Universities web-CAT rules",
+    "description": "WebcatCLI is a Python-based WebCAT-style pre-submission checker for Java projects. It enforces coding and Javadoc rules, runs JUnit tests with configurable assertions, auto-generates a minimal Maven POM, and verifies 100% method and branch coverage\u2014with an optional `--run-main` mode. This is all based on the Virginia Tech Universities web-CAT rules",
     "stargazers_count": 1,
     "language": "Shell",
     "pushed_at": "2026-06-20T01:07:07Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "Ai-Pi-Cam",
     "html_url": "https://github.com/kleinpanic/Ai-Pi-Cam",
-    "description": "Appliance-style AI camera for Raspberry Pi 4 + OV5647 — CPU-only TFLite detection, 5 modes, 21-pt hand skeleton, LAN MJPEG + native HUD, local recording. No cloud.",
+    "description": "Appliance-style AI camera for Raspberry Pi 4 + OV5647 \u2014 CPU-only TFLite detection, 5 modes, 21-pt hand skeleton, LAN MJPEG + native HUD, local recording. No cloud.",
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2026-06-18T04:56:27Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "xcode-mcp-suite",
     "html_url": "https://github.com/kleinpanic/xcode-mcp-suite",
-    "description": "SDK, CLI, and MCP proxy for Xcode's agentic coding bridge (xcrun mcpbridge) — Xcode 26.3+",
+    "description": "SDK, CLI, and MCP proxy for Xcode's agentic coding bridge (xcrun mcpbridge) \u2014 Xcode 26.3+",
     "stargazers_count": 1,
     "language": "TypeScript",
     "pushed_at": "2026-06-08T20:02:46Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "Ooxele3-Firmware",
@@ -213,7 +282,10 @@
     "stargazers_count": 0,
     "language": null,
     "pushed_at": "2026-06-05T20:12:39Z",
-    "fork": true
+    "fork": true,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "topfive-app",
@@ -222,7 +294,10 @@
     "stargazers_count": 0,
     "language": "HTML",
     "pushed_at": "2026-04-21T22:13:04Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "ghost-pipeline",
@@ -231,7 +306,10 @@
     "stargazers_count": 0,
     "language": "JavaScript",
     "pushed_at": "2026-04-19T00:58:45Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "claude-code",
@@ -240,7 +318,10 @@
     "stargazers_count": 0,
     "language": null,
     "pushed_at": "2026-04-18T01:34:30Z",
-    "fork": true
+    "fork": true,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "claude-code-l",
@@ -249,7 +330,10 @@
     "stargazers_count": 1,
     "language": "TypeScript",
     "pushed_at": "2026-04-14T05:08:00Z",
-    "fork": true
+    "fork": true,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "The-Stein-Files",
@@ -258,16 +342,22 @@
     "stargazers_count": 0,
     "language": "JavaScript",
     "pushed_at": "2026-03-20T05:01:28Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "FleaMarketAI",
     "html_url": "https://github.com/kleinpanic/FleaMarketAI",
-    "description": "AI API key discovery and validation tool — scans public GitHub repos/gists for leaked keys and validates them live",
+    "description": "AI API key discovery and validation tool \u2014 scans public GitHub repos/gists for leaked keys and validates them live",
     "stargazers_count": 1,
     "language": "Python",
     "pushed_at": "2026-03-19T03:25:42Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "pplx-research",
@@ -276,16 +366,22 @@
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2026-03-17T00:57:52Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "sanebox-cli",
     "html_url": "https://github.com/kleinpanic/sanebox-cli",
-    "description": "CLI for SaneBox email management — train folders, manage blacklist, view digests. Dual auth: OAuth + session cookie.",
+    "description": "CLI for SaneBox email management \u2014 train folders, manage blacklist, view digests. Dual auth: OAuth + session cookie.",
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2026-03-17T00:24:28Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "obd-dashboard",
@@ -294,7 +390,10 @@
     "stargazers_count": 1,
     "language": "Python",
     "pushed_at": "2026-03-16T03:51:34Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "battery-watcher",
@@ -303,7 +402,10 @@
     "stargazers_count": 0,
     "language": "C",
     "pushed_at": "2026-03-15T19:07:51Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "fblogin",
@@ -312,7 +414,10 @@
     "stargazers_count": 2,
     "language": "C",
     "pushed_at": "2026-03-11T19:41:45Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "CanvasTui",
@@ -321,7 +426,10 @@
     "stargazers_count": 1,
     "language": "Python",
     "pushed_at": "2026-03-11T19:41:42Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "kleinpanic",
@@ -330,25 +438,34 @@
     "stargazers_count": 1,
     "language": null,
     "pushed_at": "2026-03-11T19:41:38Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "oc-boot-notify",
     "html_url": "https://github.com/kleinpanic/oc-boot-notify",
-    "description": "OpenClaw gateway startup hook — notifies agents of interrupted tasks on reboot",
+    "description": "OpenClaw gateway startup hook \u2014 notifies agents of interrupted tasks on reboot",
     "stargazers_count": 0,
     "language": "JavaScript",
     "pushed_at": "2026-03-07T07:55:45Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "canvas-lms",
     "html_url": "https://github.com/kleinpanic/canvas-lms",
-    "description": "Read-only Canvas LMS API wrapper for OpenClaw agents — courses, assignments, grades, announcements, and more",
+    "description": "Read-only Canvas LMS API wrapper for OpenClaw agents \u2014 courses, assignments, grades, announcements, and more",
     "stargazers_count": 1,
     "language": "Shell",
     "pushed_at": "2026-03-01T22:19:51Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "ICS-Satellite",
@@ -357,7 +474,10 @@
     "stargazers_count": 1,
     "language": "Python",
     "pushed_at": "2026-02-05T02:10:44Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "codex-container",
@@ -366,7 +486,10 @@
     "stargazers_count": 0,
     "language": "Shell",
     "pushed_at": "2026-02-04T07:44:32Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "IP-Tracer",
@@ -375,16 +498,22 @@
     "stargazers_count": 0,
     "language": null,
     "pushed_at": "2025-11-12T10:19:48Z",
-    "fork": true
+    "fork": true,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "rpkit",
     "html_url": "https://github.com/kleinpanic/rpkit",
-    "description": "A clean Python CLI to analyze, edit, merge, and publish Minecraft resource packs — with SHA-1, server.properties snippets, and GitHub Release upload.",
+    "description": "A clean Python CLI to analyze, edit, merge, and publish Minecraft resource packs \u2014 with SHA-1, server.properties snippets, and GitHub Release upload.",
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2025-08-18T06:47:35Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "TreeAssist",
@@ -393,16 +522,22 @@
     "stargazers_count": 0,
     "language": "Java",
     "pushed_at": "2025-07-29T02:12:31Z",
-    "fork": true
+    "fork": true,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "OSLA",
     "html_url": "https://github.com/kleinpanic/OSLA",
-    "description": "OSLA — a lightweight CLI tool to generate LICENSE files from an offline database of popular open-source licenses with auto placeholder replacement and configurable defaults.",
+    "description": "OSLA \u2014 a lightweight CLI tool to generate LICENSE files from an offline database of popular open-source licenses with auto placeholder replacement and configurable defaults.",
     "stargazers_count": 1,
     "language": "C",
     "pushed_at": "2025-07-18T00:19:56Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "free-e",
@@ -411,7 +546,10 @@
     "stargazers_count": 0,
     "language": "Shell",
     "pushed_at": "2025-05-11T19:49:52Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "SMsh",
@@ -420,25 +558,34 @@
     "stargazers_count": 0,
     "language": "Shell",
     "pushed_at": "2025-05-11T00:12:24Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "toralizer",
     "html_url": "https://github.com/kleinpanic/toralizer",
-    "description": "Toralizer is a small, LD_PRELOAD-based tool that intercepts a program’s outgoing network connections and routes them through the Tor network via a SOCKS5 proxy. Instead of modifying or reconfiguring your software, Toralizer transparently hooks the connect() system call at runtime, sets up a SOCKS5 handshake with Tor (usually at 127.0.0.1:9050)",
+    "description": "Toralizer is a small, LD_PRELOAD-based tool that intercepts a program\u2019s outgoing network connections and routes them through the Tor network via a SOCKS5 proxy. Instead of modifying or reconfiguring your software, Toralizer transparently hooks the connect() system call at runtime, sets up a SOCKS5 handshake with Tor (usually at 127.0.0.1:9050)",
     "stargazers_count": 1,
     "language": "C",
     "pushed_at": "2025-05-08T07:13:29Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "lumos",
     "html_url": "https://github.com/kleinpanic/lumos",
-    "description": "Lumos—cross-platform CLI for backlight brightness control. Supports internal panels via sysfs and external DDC/CI monitors. Features machine‑ and human‑readable output, step adjustments, percent or raw setting, on‑screen popups, and persistent device selection.",
+    "description": "Lumos\u2014cross-platform CLI for backlight brightness control. Supports internal panels via sysfs and external DDC/CI monitors. Features machine\u2011 and human\u2011readable output, step adjustments, percent or raw setting, on\u2011screen popups, and persistent device selection.",
     "stargazers_count": 1,
     "language": "C",
     "pushed_at": "2025-05-03T02:37:35Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "TI84",
@@ -447,7 +594,10 @@
     "stargazers_count": 1,
     "language": "C",
     "pushed_at": "2025-05-03T02:04:28Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "CERAS",
@@ -456,7 +606,10 @@
     "stargazers_count": 1,
     "language": "C",
     "pushed_at": "2025-04-13T06:29:12Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "QuantumStriker",
@@ -465,7 +618,10 @@
     "stargazers_count": 1,
     "language": "C",
     "pushed_at": "2025-04-01T21:59:02Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "chess",
@@ -474,7 +630,10 @@
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2025-04-01T13:11:52Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "vinlookup",
@@ -483,7 +642,10 @@
     "stargazers_count": 0,
     "language": "Python",
     "pushed_at": "2025-03-05T06:46:49Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "SNN",
@@ -492,7 +654,10 @@
     "stargazers_count": 1,
     "language": "C",
     "pushed_at": "2025-03-03T05:45:57Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "openAIcVM",
@@ -501,7 +666,10 @@
     "stargazers_count": 0,
     "language": "C",
     "pushed_at": "2025-02-14T23:03:17Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "bat0daemon",
@@ -510,7 +678,10 @@
     "stargazers_count": 0,
     "language": "C",
     "pushed_at": "2025-02-01T01:05:33Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "bash-markdown-previewer",
@@ -519,16 +690,22 @@
     "stargazers_count": 0,
     "language": "Shell",
     "pushed_at": "2025-01-26T09:57:22Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "kanyesay",
     "html_url": "https://github.com/kleinpanic/kanyesay",
-    "description": "A customizable, fun command-line tool that lets Kanye West deliver random quotes in ASCII art style! Fetch quotes from Kanye, change the look and feel of the speech bubble, and select different Kanye ASCII arts. Configure it to suit your style, and install it globally to have Kanye’s inspiration available anytime.",
+    "description": "A customizable, fun command-line tool that lets Kanye West deliver random quotes in ASCII art style! Fetch quotes from Kanye, change the look and feel of the speech bubble, and select different Kanye ASCII arts. Configure it to suit your style, and install it globally to have Kanye\u2019s inspiration available anytime.",
     "stargazers_count": 0,
     "language": "Shell",
     "pushed_at": "2024-11-06T21:46:36Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "libinput-gestures-scripts",
@@ -537,7 +714,10 @@
     "stargazers_count": 0,
     "language": "Shell",
     "pushed_at": "2024-10-23T02:06:36Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   },
   {
     "name": "todo_task_manager",
@@ -546,6 +726,9 @@
     "stargazers_count": 0,
     "language": "C",
     "pushed_at": "2024-10-16T17:06:43Z",
-    "fork": false
+    "fork": false,
+    "owner": {
+      "login": "kleinpanic"
+    }
   }
 ]

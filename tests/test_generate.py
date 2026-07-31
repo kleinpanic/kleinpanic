@@ -4,7 +4,9 @@ Run: python3 -m unittest discover -s tests -v
 Fixtures in tests/fixtures/ are saved GitHub/Hugging Face API responses
 (public data only, trimmed to the fields the generator consumes).
 """
+import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -215,6 +217,246 @@ class GenerateReadmeTest(unittest.TestCase):
                 # cells: ['', ' [name](url) ', ' desc ', ' Lang ', ' ★ ', '']
                 self.assertGreater(len(cells), 4)
                 self.assertTrue(cells[4], f"empty Lang cell in: {line}")
+
+
+# ---------------------------------------------------------------------------
+# Hardening tests: API cache, License/Latest columns, safe_section isolation.
+# These cover the changes from the 2026-07-30 hardening pass.
+# ---------------------------------------------------------------------------
+
+
+class CacheTest(unittest.TestCase):
+    """The 24h on-disk API cache must not slow CI or break fixtures mode."""
+
+    def setUp(self):
+        # Point CACHE_DIR at a tmp dir so tests don't pollute the real cache.
+        self._orig_cache_dir = g.CACHE_DIR
+        self._tmp = tempfile.TemporaryDirectory()
+        g.CACHE_DIR = Path(self._tmp.name)
+
+    def tearDown(self):
+        g.CACHE_DIR = self._orig_cache_dir
+        self._tmp.cleanup()
+
+    def test_fixtures_mode_bypasses_cache(self):
+        """When --fixtures is set, the fetcher must not touch the disk cache."""
+        fetcher = g.Fetcher(fixtures=FIXTURES, use_cache=True)
+        # Should not raise or write to CACHE_DIR even though use_cache=True.
+        data = fetcher.github_user("kleinpanic")
+        self.assertEqual(data["login"], "kleinpanic")
+        # Nothing should be written under CACHE_DIR.
+        self.assertFalse(any(Path(self._tmp.name).iterdir()))
+
+    def test_no_cache_flag_disables_writes(self):
+        """--no-cache must skip cache writes even on live fetches."""
+        fetcher = g.Fetcher(use_cache=False)
+        url = "https://example.test/api"
+        fetcher._write_cache(url, {"hello": "world"})
+        # No file should appear in the tmp cache dir.
+        self.assertFalse(list(Path(self._tmp.name).iterdir()))
+
+    def test_cache_round_trip(self):
+        """A write followed by a read returns the same payload."""
+        fetcher = g.Fetcher(use_cache=True)
+        url = "https://example.test/round-trip"
+        payload = {"commits": [1, 2, 3], "user": "kleinpanic"}
+        fetcher._write_cache(url, payload)
+        cached = fetcher._read_cache(url)
+        self.assertEqual(cached, payload)
+
+    def test_cache_ttl_expiry(self):
+        """Cache entries older than TTL are ignored (returns None)."""
+        fetcher = g.Fetcher(use_cache=True)
+        url = "https://example.test/expired"
+        fetcher._write_cache(url, {"v": 1})
+        # Backdate the file's mtime past the TTL.
+        path = fetcher._cache_path(url)
+        old = path.stat().st_mtime - (g.CACHE_TTL_SECONDS + 60)
+        import os
+        os.utime(path, (old, old))
+        self.assertIsNone(fetcher._read_cache(url))
+
+    def test_cache_handles_corrupt_file(self):
+        """A corrupted cache file must not raise — treat as cache miss."""
+        fetcher = g.Fetcher(use_cache=True)
+        url = "https://example.test/corrupt"
+        path = fetcher._cache_path(url)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("not valid json {{{", encoding="utf-8")
+        self.assertIsNone(fetcher._read_cache(url))
+
+
+class FeaturedMetaTest(unittest.TestCase):
+    """Featured table adds License + Latest columns when a fetcher is supplied."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.profile = g.yaml.safe_load(
+            (g.ROOT / "profile.yml").read_text(encoding="utf-8")
+        )
+        cls.repos = g.Fetcher(fixtures=FIXTURES).github_repos("kleinpanic")
+        cls.meta_fixture = json.loads((FIXTURES / "github_repo_meta.json").read_text())
+
+    def test_with_fetcher_adds_meta_columns(self):
+        fetcher = g.Fetcher(fixtures=FIXTURES)
+        section = g.sec_featured(self.profile, self.repos, fetcher=fetcher)
+        self.assertIn("| License |", section)
+        self.assertIn("| Latest |", section)
+
+    def test_without_fetcher_uses_short_header(self):
+        """Old behaviour is preserved when no fetcher is passed (e.g. legacy callers)."""
+        section = g.sec_featured(self.profile, self.repos)
+        self.assertNotIn("| License |", section)
+        self.assertNotIn("| Latest |", section)
+
+    def test_meta_fixture_populates_license_and_latest(self):
+        """When the meta fixture has data for a featured repo, it appears in the table."""
+        fetcher = g.Fetcher(fixtures=FIXTURES)
+        section = g.sec_featured(self.profile, self.repos, fetcher=fetcher)
+        # fblogin is in the fixture — confirm its license + release show up.
+        fblogin_row = next(
+            (ln for ln in section.splitlines() if "| fblogin" in ln), None
+        )
+        self.assertIsNotNone(fblogin_row, "fblogin row missing from featured table")
+        self.assertIn("MIT", fblogin_row)
+        self.assertIn("1.0.0", fblogin_row)
+
+    def test_fetcher_failures_dont_kill_section(self):
+        """If license/release fetches throw, the row still renders with em-dashes."""
+
+        class _BrokenFetcher:
+            def __init__(self, outer):
+                self.outer = outer
+
+            def github_repo_license(self, owner, repo):
+                raise RuntimeError("simulated outage")
+
+            def github_repo_latest_release(self, owner, repo):
+                raise RuntimeError("simulated outage")
+
+            # Other methods still delegate to the working fetcher.
+            def __getattr__(self, name):
+                return getattr(self.outer, name)
+
+        fetcher = _BrokenFetcher(g.Fetcher(fixtures=FIXTURES))
+        # Should not raise — license/latest just show "—".
+        section = g.sec_featured(self.profile, self.repos, fetcher=fetcher)
+        self.assertIn("| License |", section)
+        self.assertIn("| — |", section)
+
+
+class SafeSectionTest(unittest.TestCase):
+    """safe_section must isolate failures so one bad section never kills the regen."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.profile = g.yaml.safe_load(
+            (g.ROOT / "profile.yml").read_text(encoding="utf-8")
+        )
+
+    def test_returns_renderer_output_on_success(self):
+        self.assertEqual(
+            g.safe_section("t", lambda: "hello", fallback="fb"),
+            "hello",
+        )
+
+    def test_returns_fallback_on_exception(self):
+        def boom():
+            raise RuntimeError("kaboom")
+
+        result = g.safe_section("t", boom, fallback="fb")
+        self.assertEqual(result, "fb")
+
+    def test_uses_default_fallback_when_none_provided(self):
+        def boom():
+            raise ValueError("nope")
+
+        result = g.safe_section("my-section", boom)
+        self.assertEqual(result, "_my-section data temporarily unavailable._")
+
+    def test_empty_string_return_passes_through(self):
+        """A section that successfully returns '' stays as '' — that's how
+        sec_pypi/sec_npm/sec_now signal 'section disabled, hide it' to the
+        template. The default fallback message must NOT fire on empty
+        successful results, only on exceptions.
+        """
+
+        def empty():
+            return ""
+
+        # With explicit fallback: empty result is replaced by fallback.
+        self.assertEqual(g.safe_section("t", empty, fallback="fb"), "fb")
+        # Without fallback: empty result passes through. The placeholder
+        # then resolves to "" in the template, which is the correct signal
+        # for "this section is intentionally hidden".
+        self.assertEqual(g.safe_section("t", empty), "")
+
+    def test_build_sections_continues_when_one_section_raises(self):
+        """Integration check: a section that raises must not crash build_sections."""
+
+        class _HalfBrokenFetcher:
+            def __init__(self, good):
+                self._good = good
+
+            def github_user(self, user):
+                raise RuntimeError("simulated GitHub outage")
+
+            def github_repos(self, user):
+                return self._good.github_repos(user)
+
+            def hf_models(self, user):
+                return self._good.hf_models(user)
+
+            def hf_datasets(self, user):
+                return self._good.hf_datasets(user)
+
+            def github_repo_license(self, owner, repo):
+                return None
+
+            def github_repo_latest_release(self, owner, repo):
+                return (None, None)
+
+            def pypi_package(self, name):
+                return None
+
+            def npm_search(self, user):
+                return {"objects": []}
+
+        fetcher = _HalfBrokenFetcher(g.Fetcher(fixtures=FIXTURES))
+        # github_user raises — build_sections catches that at the top level and
+        # substitutes skeleton user_json. All other sections still render.
+        sections = g.build_sections(self.profile, fetcher, "2026-07-30")
+        self.assertIn("STATS", sections)
+        self.assertIn("RECENT", sections)
+        self.assertIn("LANGUAGES", sections)
+        # STATS rendered with the skeleton (0 repos, 0 followers) rather than
+        # crashing the whole build.
+        self.assertIn("0 repos", sections["STATS"])
+        self.assertIn("0 followers", sections["STATS"])
+
+
+class FetcherLicenseReleaseTest(unittest.TestCase):
+    """The two new fetcher methods must handle 404s and other failures gracefully."""
+
+    def test_github_repo_license_returns_spdx_id(self):
+        fetcher = g.Fetcher(fixtures=FIXTURES)
+        spdx = fetcher.github_repo_license("kleinpanic", "fblogin")
+        self.assertEqual(spdx, "MIT")
+
+    def test_github_repo_license_missing_returns_none(self):
+        fetcher = g.Fetcher(fixtures=FIXTURES)
+        self.assertIsNone(fetcher.github_repo_license("kleinpanic", "no-license-repo"))
+
+    def test_github_repo_latest_release_returns_tag_and_url(self):
+        fetcher = g.Fetcher(fixtures=FIXTURES)
+        tag, url = fetcher.github_repo_latest_release("kleinpanic", "fblogin")
+        self.assertEqual(tag, "v1.0.0")
+        self.assertIn("github.com/kleinpanic/fblogin/releases/tag/v1.0.0", url)
+
+    def test_github_repo_latest_release_missing_returns_none_pair(self):
+        fetcher = g.Fetcher(fixtures=FIXTURES)
+        tag, url = fetcher.github_repo_latest_release("kleinpanic", "no-release-repo")
+        self.assertEqual((tag, url), (None, None))
 
 
 if __name__ == "__main__":
