@@ -51,6 +51,18 @@ jobs:
           # with new rules.
           ruff check scripts/ tests/
 
+      - name: Lint README + template with markdownlint-cli2
+        run: |
+          # markdownlint-cli2 catches table/heading/blank-line issues that
+          # would otherwise only surface when the rendered README looks broken
+          # in a browser. Pinned to a specific version via npx --yes so new
+          # rules don't suddenly fail CI. profile.yml is YAML, not Markdown,
+          # so it's intentionally excluded — linting it just produces noise.
+          npx --yes markdownlint-cli2@0.23.2 "README.md" "README.template.md" \
+            || (echo "--- markdownlint violations above ---"; \
+                echo "If a rule is wrong, fix the doc, not the rule."; \
+                exit 1)
+
       - name: Run offline tests (fixtures)
         run: python3 -m unittest discover -s tests -v
 
