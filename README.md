@@ -28,7 +28,7 @@
 
 <pre>
 ┌─ kleinpanic ─────────────────────────────────────────┐
-│  60 repos  ·  12 followers  ·  23★  ·  2 forks       │
+│  60 repos  ·  11 followers  ·  23★  ·  2 forks       │
 └──────────────────────────────────────────────────────┘
 </pre>
 </div>
@@ -105,11 +105,11 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 | Repo | About | Last push |
 | --- | --- | --- |
+| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings… | 2026-08-17 |
+| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-08-16 |
+| [VTWebCatCLI](https://github.com/kleinpanic/VTWebCatCLI) | WebcatCLI is a Python-based WebCAT-style pre-submission checker for Java projects. It enf… | 2026-08-13 |
 | [oc-config-gate](https://github.com/kleinpanic/oc-config-gate) | OpenClaw config approval gate with native Discord buttons, validation, blessing, audit, a… | 2026-08-09 |
-| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-08-09 |
-| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings… | 2026-08-08 |
 | [git-activity](https://github.com/kleinpanic/git-activity) | GitHub contribution-graph gradient generator | 2026-08-08 |
-| [File-Transfer-Website](https://github.com/kleinpanic/File-Transfer-Website) | A portable website designed for minimal traffic. Main purpose is to transfer files betwee… | 2026-08-05 |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -128,16 +128,16 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 
 | Model | Downloads | Likes |
 | --- | --- | --- |
-| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 9 | 1 |
-| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 514 | 1 |
-| [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 27 | 0 |
+| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 12 | 1 |
+| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 221 | 1 |
+| [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 34 | 0 |
 | [canvas-calendar-agent-v7-dpo-gguf](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo-gguf) | 0 | 0 |
 
 **Datasets**
 
 | Dataset | Downloads |
 | --- | --- |
-| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 35 |
+| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 36 |
 
 
 
@@ -252,7 +252,7 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<p align="center"><sub>Last refreshed 2026-08-10 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
+<p align="center"><sub>Last refreshed 2026-08-17 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=80&section=footer" />
