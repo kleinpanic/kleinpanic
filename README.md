@@ -28,7 +28,7 @@
 
 <pre>
 ┌─ kleinpanic ─────────────────────────────────────────┐
-│  62 repos  ·  11 followers  ·  23★  ·  2 forks       │
+│  62 repos  ·  11 followers  ·  22★  ·  2 forks       │
 └──────────────────────────────────────────────────────┘
 </pre>
 </div>
@@ -93,7 +93,7 @@ curl https://kleinpanic.com/ip     # check your public IP
 | --- | --- | --- | --- |
 | [fblogin](https://github.com/kleinpanic/fblogin) | fblogin is a lightweight, framebuffer-based login manager for Debian. It replaces tty1 with a… | C | 2 |
 | [toralizer](https://github.com/kleinpanic/toralizer) | Toralizer is a small, LD_PRELOAD-based tool that intercepts a program’s outgoing network conne… | C | 1 |
-| [GSD-OC](https://github.com/kleinpanic/GSD-OC) | GSD lifecycle orchestration as a native OpenClaw plugin — enforced research→plan→execute→verif… | TypeSc | 2 |
+| [GSD-OC](https://github.com/kleinpanic/GSD-OC) | GSD lifecycle orchestration as a native OpenClaw plugin — enforced research→plan→execute→verif… | TypeSc | 1 |
 | [lumos](https://github.com/kleinpanic/lumos) | Lumos—cross-platform CLI for backlight brightness control. Supports internal panels via sysfs… | C | 1 |
 | [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings. Sel… | TypeSc | 2 |
 
@@ -105,11 +105,11 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 | Repo | About | Last push |
 | --- | --- | --- |
-| [fdm-material-atlas](https://github.com/kleinpanic/fdm-material-atlas) | Interactive FDM/FFF material selector and technical reference atlas | 2026-09-14 |
-| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-09-13 |
+| [fdm-material-atlas](https://github.com/kleinpanic/fdm-material-atlas) | Interactive FDM/FFF material selector and technical reference atlas | 2026-09-21 |
+| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-09-20 |
+| [datahall](https://github.com/kleinpanic/datahall) | An interactive educational museum of database internals — storage engines, concurrency, i… | 2026-09-18 |
 | [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings… | 2026-09-11 |
 | [shut-the-box-optimal-strategy](https://github.com/kleinpanic/shut-the-box-optimal-strategy) | Statistically optimal Shut the Box play assistant with dynamic programming engine | 2026-09-10 |
-| [maze_solver](https://github.com/kleinpanic/maze_solver) | Maze generation and pathfinding lab with GUI, TUI, and GitHub Pages WebUI | 2026-09-10 |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -128,16 +128,16 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 
 | Model | Downloads | Likes |
 | --- | --- | --- |
-| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 10 | 1 |
-| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 59 | 1 |
-| [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 32 | 0 |
+| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 18 | 1 |
+| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 56 | 1 |
+| [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 40 | 0 |
 | [canvas-calendar-agent-v7-dpo-gguf](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo-gguf) | 0 | 0 |
 
 **Datasets**
 
 | Dataset | Downloads |
 | --- | --- |
-| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 12 |
+| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 17 |
 
 
 
@@ -252,7 +252,7 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<p align="center"><sub>Last refreshed 2026-09-14 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
+<p align="center"><sub>Last refreshed 2026-09-21 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=80&section=footer" />
