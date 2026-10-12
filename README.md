@@ -28,7 +28,7 @@
 
 <pre>
 ┌─ kleinpanic ─────────────────────────────────────────┐
-│  63 repos  ·  12 followers  ·  22★  ·  2 forks       │
+│  64 repos  ·  13 followers  ·  23★  ·  2 forks       │
 └──────────────────────────────────────────────────────┘
 </pre>
 </div>
@@ -105,18 +105,18 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 | Repo | About | Last push |
 | --- | --- | --- |
-| [fdm-material-atlas](https://github.com/kleinpanic/fdm-material-atlas) | Interactive FDM/FFF material selector and technical reference atlas | 2026-10-05 |
-| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-10-04 |
-| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings… | 2026-10-03 |
-| [datahall](https://github.com/kleinpanic/datahall) | An interactive educational museum of database internals — storage engines, concurrency, i… | 2026-10-02 |
-| [BioRenderBridge](https://github.com/kleinpanic/BioRenderBridge) | Native Swift BioRender MCP bridge for Codex, Claude Code, and OpenCode. Research and plan… | 2026-09-30 |
+| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-10-11 |
+| [datahall](https://github.com/kleinpanic/datahall) | An interactive educational museum of database internals — storage engines, concurrency, i… | 2026-10-09 |
+| [septa-commute-planner](https://github.com/kleinpanic/septa-commute-planner) | Configurable Google-hosted SEPTA Regional Rail commute planner | 2026-10-09 |
+| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings… | 2026-10-09 |
+| [ups-orchestrator](https://github.com/kleinpanic/ups-orchestrator) | NUT-driven UPS power-event monitor with beautiful per-UPS Discord embeds (homelab, dual C… | 2026-10-09 |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## Languages
 
-**Python** 21 · **C** 14 · **Shell** 9 · **TypeScript** 7 · **JavaScript** 4 · **Astro** 1 · **HTML** 1  
-<sub>57 owned repos with a detected primary language</sub>
+**Python** 21 · **C** 14 · **Shell** 9 · **TypeScript** 7 · **JavaScript** 5 · **Astro** 1 · **HTML** 1  
+<sub>58 owned repos with a detected primary language</sub>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -128,16 +128,16 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 
 | Model | Downloads | Likes |
 | --- | --- | --- |
-| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 22 | 1 |
-| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 54 | 1 |
-| [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 40 | 0 |
+| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 25 | 1 |
+| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 36 | 1 |
+| [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 28 | 0 |
 | [canvas-calendar-agent-v7-dpo-gguf](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo-gguf) | 0 | 0 |
 
 **Datasets**
 
 | Dataset | Downloads |
 | --- | --- |
-| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 18 |
+| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 14 |
 
 
 
@@ -252,7 +252,7 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<p align="center"><sub>Last refreshed 2026-10-05 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
+<p align="center"><sub>Last refreshed 2026-10-12 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=80&section=footer" />
