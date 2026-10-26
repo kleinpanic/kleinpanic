@@ -1,8 +1,13 @@
 <!-- ═══════════════════════════════════════════════════════════════════
      README.md is GENERATED from this template + profile.yml.
      Do not edit README.md directly. Regenerate with:
-       python3 scripts/generate_readme.py
-     CI regenerates weekly and on changes to this file / profile.yml / scripts/.
+       pip install -r scripts/requirements.txt
+       python3 scripts/generate_readme.py            # live (GITHUB_TOKEN optional)
+       python3 scripts/generate_readme.py --fixtures tests/fixtures   # offline
+     Lint + test:
+       ruff check scripts/ tests/ && python3 -m unittest discover -s tests -v
+     CI runs lint + tests on every PR/push, and regenerates on main weekly and
+     on changes to this file / profile.yml / scripts/.
      ═══════════════════════════════════════════════════════════════════ -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=100&section=header&text=kleinpanic&fontColor=ffffff&fontSize=40&fontAlignY=38&desc=systems+%7C+terminal+%7C+open+source&descAlignY=60&descSize=16" />
