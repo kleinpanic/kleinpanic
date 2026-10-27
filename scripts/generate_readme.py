@@ -67,7 +67,9 @@ class Fetcher:
             "Accept": "application/vnd.github+json",
             "User-Agent": "kleinpanic-readme-generator",
         }
-        if self.token:
+        # The token is a GitHub credential; never send it to other hosts
+        # (Hugging Face is fetched through this same helper).
+        if self.token and url.startswith(GH_API + "/"):
             headers["Authorization"] = f"Bearer {self.token}"
         resp = requests.get(url, headers=headers, timeout=30)
         resp.raise_for_status()
@@ -389,17 +391,16 @@ def sec_last_updated(today):
 
 
 def render(template, sections):
+    # Every template placeholder must have a section; repl() enforces that.
+    # The rendered output is not re-scanned: API text such as a repo
+    # description containing "{{NAME}}" is content, not a placeholder.
     def repl(match):
         key = match.group(1)
         if key not in sections:
             raise SystemExit(f"error: unknown placeholder {{{{{key}}}}}")
         return sections[key]
 
-    out = PLACEHOLDER.sub(repl, template)
-    leftover = PLACEHOLDER.findall(out)
-    if leftover:
-        raise SystemExit(f"error: unreplaced placeholders: {leftover}")
-    return out
+    return PLACEHOLDER.sub(repl, template)
 
 
 def build_sections(profile, fetcher, today):
@@ -445,7 +446,7 @@ def main(argv=None):
     parser.add_argument(
         "--check",
         action="store_true",
-        help="exit 1 if regenerating would change README.md",
+        help="exit 1 if regenerating would change the --output file",
     )
     parser.add_argument(
         "--date",
@@ -464,11 +465,12 @@ def main(argv=None):
     rendered = render(template, sections)
 
     if args.check:
-        current = OUTPUT_PATH.read_text(encoding="utf-8") if OUTPUT_PATH.exists() else ""
+        output = Path(args.output)
+        current = output.read_text(encoding="utf-8") if output.exists() else ""
         if current != rendered:
-            print("README.md is stale — run scripts/generate_readme.py", file=sys.stderr)
+            print(f"{output} is stale — run scripts/generate_readme.py", file=sys.stderr)
             return 1
-        print("README.md is up to date")
+        print(f"{output} is up to date")
         return 0
 
     Path(args.output).write_text(rendered, encoding="utf-8")

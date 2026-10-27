@@ -4,9 +4,13 @@ Run: python3 -m unittest discover -s tests -v
 Fixtures in tests/fixtures/ are saved GitHub/Hugging Face API responses
 (public data only, trimmed to the fields the generator consumes).
 """
+import io
 import sys
+import tempfile
 import unittest
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
+from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
@@ -215,6 +219,52 @@ class GenerateReadmeTest(unittest.TestCase):
                 # cells: ['', ' [name](url) ', ' desc ', ' Lang ', ' ★ ', '']
                 self.assertGreater(len(cells), 4)
                 self.assertTrue(cells[4], f"empty Lang cell in: {line}")
+
+
+class FetcherAuthTest(unittest.TestCase):
+    def _headers_for(self, url):
+        resp = mock.Mock()
+        resp.json.return_value = []
+        with mock.patch.object(g.requests, "get", return_value=resp) as get:
+            g.Fetcher(token="ghs_secret")._get(url)
+        return get.call_args.kwargs["headers"]
+
+    def test_token_sent_to_github(self):
+        headers = self._headers_for(f"{g.GH_API}/users/kleinpanic")
+        self.assertEqual(headers["Authorization"], "Bearer ghs_secret")
+
+    def test_token_not_sent_to_huggingface(self):
+        headers = self._headers_for(f"{g.HF_API}/models?author=kleinpanic93&limit=50")
+        self.assertNotIn("Authorization", headers)
+
+    def test_token_not_sent_to_lookalike_host(self):
+        headers = self._headers_for("https://api.github.com.evil.example/x")
+        self.assertNotIn("Authorization", headers)
+
+
+class RenderTest(unittest.TestCase):
+    def test_placeholder_like_text_in_content_is_kept(self):
+        # A repo description such as "templates with {{NAME}} vars" used to
+        # make render() abort the whole regen with "unreplaced placeholders".
+        out = g.render("a {{FEATURED}} b", {"FEATURED": "uses {{NAME}} vars"})
+        self.assertEqual(out, "a uses {{NAME}} vars b")
+
+    def test_unknown_template_placeholder_still_fails(self):
+        with self.assertRaises(SystemExit):
+            g.render("{{MISSING}}", {})
+
+
+class CheckModeTest(unittest.TestCase):
+    def test_check_uses_output_path(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "README.md"
+            args = ["--fixtures", str(FIXTURES), "--date", "2026-07-22", "--output", str(out)]
+            with mock.patch.dict(g.os.environ, {}, clear=True), \
+                    redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+                self.assertEqual(g.main(args), 0)
+                self.assertEqual(g.main(args + ["--check"]), 0)
+                out.write_text("stale", encoding="utf-8")
+                self.assertEqual(g.main(args + ["--check"]), 1)
 
 
 if __name__ == "__main__":
