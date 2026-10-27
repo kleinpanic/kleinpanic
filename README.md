@@ -34,7 +34,7 @@
 
 <pre>
 ┌─ kleinpanic ─────────────────────────────────────────┐
-│  64 repos  ·  14 followers  ·  22★  ·  2 forks       │
+│  64 repos  ·  13 followers  ·  22★  ·  2 forks       │
 └──────────────────────────────────────────────────────┘
 </pre>
 </div>
@@ -111,11 +111,11 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 | Repo | About | Last push |
 | --- | --- | --- |
-| [oc-config-gate](https://github.com/kleinpanic/oc-config-gate) | OpenClaw config approval gate with native Discord buttons, validation, blessing, audit, a… | 2026-10-26 |
-| [fdm-material-atlas](https://github.com/kleinpanic/fdm-material-atlas) | Interactive FDM/FFF material selector and technical reference atlas | 2026-10-26 |
-| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-10-25 |
-| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings… | 2026-10-23 |
-| [xcode-mcp-suite](https://github.com/kleinpanic/xcode-mcp-suite) | SDK, CLI, and MCP proxy for Xcode's agentic coding bridge (xcrun mcpbridge) — Xcode 26.3+ | 2026-10-23 |
+| [translator](https://github.com/kleinpanic/translator) | — | 2026-10-27 |
+| [TermChroma](https://github.com/kleinpanic/TermChroma) | TermChroma is a powerful Python CLI/TUI tool that converts images into ASCII art with opt… | 2026-10-27 |
+| [ups-orchestrator](https://github.com/kleinpanic/ups-orchestrator) | NUT-driven UPS power-event monitor with beautiful per-UPS Discord embeds (homelab, dual C… | 2026-10-27 |
+| [xcode-mcp-suite](https://github.com/kleinpanic/xcode-mcp-suite) | SDK, CLI, and MCP proxy for Xcode's agentic coding bridge (xcrun mcpbridge) — Xcode 26.3+ | 2026-10-27 |
+| [oc-twilio-voice](https://github.com/kleinpanic/oc-twilio-voice) | Custom Twilio voice server for OpenClaw with Spark STT/TTS failover | 2026-10-27 |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -143,7 +143,7 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 
 | Dataset | Downloads |
 | --- | --- |
-| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 43 |
+| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 45 |
 
 
 
@@ -258,7 +258,7 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<p align="center"><sub>Last refreshed 2026-10-26 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
+<p align="center"><sub>Last refreshed 2026-10-27 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=80&section=footer" />
