@@ -6,8 +6,9 @@
        python3 scripts/generate_readme.py --fixtures tests/fixtures   # offline
      Lint + test:
        ruff check scripts/ tests/ && python3 -m unittest discover -s tests -v
-     CI runs lint + tests on every PR/push, and regenerates on main weekly and
-     on changes to this file / profile.yml / scripts/.
+     CI runs lint + tests on every PR and on pushes touching this file /
+     profile.yml / scripts/ / tests/; it regenerates only on main (weekly,
+     on manual dispatch, and on those pushes).
      ═══════════════════════════════════════════════════════════════════ -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=100&section=header&text=kleinpanic&fontColor=ffffff&fontSize=40&fontAlignY=38&desc=systems+%7C+terminal+%7C+open+source&descAlignY=60&descSize=16" />
