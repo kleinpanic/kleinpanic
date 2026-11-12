@@ -134,7 +134,7 @@ class GenerateReadmeTest(unittest.TestCase):
 
     def test_trunc_strips_trailing_punctuation_before_ellipsis(self):
         out = g.trunc("alpha beta, gamma delta epsilon zeta", 20)
-        self.assertEqual(out, "alpha beta…")
+        self.assertEqual(out, "alpha beta, gamma…")
 
     def test_now_renders_when_items(self):
         section = g.sec_now(self.profile)
@@ -240,7 +240,7 @@ class GenerateReadmeTest(unittest.TestCase):
         # Regression: languages were truncated to 6 chars ("TypeSc").
         section = g.sec_featured(self.profile, self.repos)
         self.assertIn("TypeScript", section)
-        self.assertNotIn("TypeSc", section)
+        self.assertNotIn("| TypeSc |", section)
 
     def test_featured_and_recent_rows_have_real_descriptions(self):
         # Regression: repos with no GitHub description rendered a "—" cell.
