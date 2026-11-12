@@ -120,6 +120,22 @@ class GenerateReadmeTest(unittest.TestCase):
         self.assertTrue(g.trunc("x" * 200, 100).endswith("…"))
         self.assertLessEqual(len(g.trunc("x" * 200, 100)), 100)
 
+    def test_trunc_cuts_at_word_boundary(self):
+        # Regression: descriptions were cut mid-word ("conne…", "verif…").
+        out = g.trunc("one two three four five six seven eight", 20)
+        self.assertEqual(out, "one two three…")
+        self.assertTrue(out.endswith("…"))
+        self.assertLessEqual(len(out), 20)
+
+    def test_trunc_first_word_longer_than_limit(self):
+        out = g.trunc("abcdefghij klm", 5)
+        self.assertTrue(out.endswith("…"))
+        self.assertLessEqual(len(out), 5)
+
+    def test_trunc_strips_trailing_punctuation_before_ellipsis(self):
+        out = g.trunc("alpha beta, gamma delta epsilon zeta", 20)
+        self.assertEqual(out, "alpha beta, gamma…")
+
     def test_now_renders_when_items(self):
         section = g.sec_now(self.profile)
         self.assertIn("## Currently", section)
@@ -219,6 +235,51 @@ class GenerateReadmeTest(unittest.TestCase):
                 # cells: ['', ' [name](url) ', ' desc ', ' Lang ', ' ★ ', '']
                 self.assertGreater(len(cells), 4)
                 self.assertTrue(cells[4], f"empty Lang cell in: {line}")
+
+    def test_featured_language_is_full_name(self):
+        # Regression: languages were truncated to 6 chars ("TypeSc").
+        section = g.sec_featured(self.profile, self.repos)
+        self.assertIn("TypeScript", section)
+        self.assertNotIn("| TypeSc |", section)
+
+    def test_featured_and_recent_rows_have_real_descriptions(self):
+        # Regression: repos with no GitHub description rendered a "—" cell.
+        for section in (g.sec_featured(self.profile, self.repos),
+                        g.sec_recent(self.profile, self.repos)):
+            for line in section.splitlines():
+                if line.startswith("| [") and "](https://github.com/" in line:
+                    about = [c.strip() for c in line.split("|")][2]
+                    self.assertTrue(about, f"empty About cell in: {line}")
+                    self.assertNotEqual(about, "—", f"placeholder About cell in: {line}")
+
+    def test_box_drawing_blocks_have_uniform_row_width(self):
+        # Regression: Setup-box rows containing "·" were one cell short,
+        # leaving a jagged right border. Wide chars count as 2 cells;
+        # "·" and other ambiguous chars count as 1.
+        def width(line):
+            import unicodedata
+            return sum(
+                2 if unicodedata.east_asian_width(ch) in ("W", "F") else 1
+                for ch in line
+            )
+
+        box_rows = ("┌", "┐", "└", "┘", "│", "├", "┤")
+        block = []
+        for line in self.output.splitlines() + [""]:
+            if any(ch in line for ch in box_rows):
+                block.append(line)
+            else:
+                if len(block) > 1:
+                    widths = {width(line) for line in block}
+                    self.assertEqual(
+                        len(widths), 1,
+                        f"jagged box border (widths {sorted(widths)}):\n" + "\n".join(block),
+                    )
+                block = []
+
+    def test_no_triple_blank_lines(self):
+        # Empty sections used to leave runs of blank lines in the output.
+        self.assertNotIn("\n\n\n", self.output)
 
 
 class FetcherAuthTest(unittest.TestCase):

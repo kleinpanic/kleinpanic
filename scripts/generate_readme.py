@@ -49,7 +49,26 @@ def trunc(text, limit=100):
     text = (text or "").strip()
     if len(text) <= limit:
         return text
-    return text[: limit - 1].rstrip() + "…"
+    cut = text[: limit - 1].rstrip()
+    if " " in cut:
+        cut = cut[: cut.rfind(" ")].rstrip(" ,;:-–—·")
+    if not cut:
+        # First word alone exceeds the limit — hard-cut rather than emit "…".
+        cut = text[: limit - 1].rstrip()
+    return cut + "…"
+
+
+def repo_about(profile, repo, limit):
+    """One-line description for a repo table row.
+
+    Order: curated profile.yml override, GitHub's own description, then a
+    non-empty fallback so no row renders a placeholder dash.
+    """
+    overrides = (profile.get("github") or {}).get("descriptions") or {}
+    desc = overrides.get(repo["name"]) or repo.get("description") or ""
+    if not desc:
+        desc = "See the repository README for details"
+    return trunc(desc, limit)
 
 
 class Fetcher:
@@ -188,10 +207,10 @@ def sec_featured(profile, repos):
         if repo is None:
             missing.append(name)
             continue
-        lang = (repo.get("language") or "—")[:6]
+        lang = repo.get("language") or "—"
         rows.append(
             f"| [{name}]({repo['html_url']}) | "
-            f"{esc_cell(trunc(repo.get('description') or '—', 95))} | "
+            f"{esc_cell(repo_about(profile, repo, 95))} | "
             f"{lang} | "
             f"{repo.get('stargazers_count', 0)} |"
         )
@@ -212,7 +231,7 @@ def sec_recent(profile, repos):
     for repo in owned[: int(cfg.get("recent_count", 5))]:
         rows.append(
             f"| [{repo['name']}]({repo['html_url']}) | "
-            f"{esc_cell(trunc(repo.get('description') or '—', 90))} | "
+            f"{esc_cell(repo_about(profile, repo, 90))} | "
             f"{(repo.get('pushed_at') or '')[:10]} |"
         )
     return "\n".join(rows)
@@ -400,7 +419,9 @@ def render(template, sections):
             raise SystemExit(f"error: unknown placeholder {{{{{key}}}}}")
         return sections[key]
 
-    return PLACEHOLDER.sub(repl, template)
+    rendered = PLACEHOLDER.sub(repl, template)
+    # Empty sections leave runs of blank lines where their placeholders sat.
+    return re.sub(r"\n{3,}", "\n\n", rendered)
 
 
 def build_sections(profile, fetcher, today):

@@ -13,6 +13,12 @@ github:
     - GSD-OC
     - lumos
     - memory-spark
+    - ghost-pipeline
+
+  # Per-repo description overrides. Some repos have no GitHub description
+  # at all; without an override their table row would render a "—" placeholder.
+  descriptions:
+    ghost-pipeline: "iMessage drafting agent — drafts replies in Klein's voice, sends only after an owner approval"
 
   # "Recently Active" table settings.
   recent_count: 5

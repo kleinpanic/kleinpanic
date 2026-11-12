@@ -43,19 +43,19 @@
 ## Setup
 
 ```
-┌──────────────────┬─────────────────────────────────────────────────────┐
-│  OS              │  Debian 13 (Trixie)  ·  Arch Linux                  │
+┌──────────────────┬──────────────────────────────────────────────────────┐
+│  OS              │  Debian 13 (Trixie)  ·  Arch Linux                   │
 │  WM              │  DWM                                                 │
 │  Editor          │  Neovim                                              │
 │  Shell           │  Zsh                                                 │
 │  Terminal        │  st                                                  │
-├──────────────────┼─────────────────────────────────────────────────────┤
-│  Workstations    │  Dell Inspiron (x2)  ·  MacBook Pro                 │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│  Workstations    │  Dell Inspiron (x2)  ·  MacBook Pro                  │
 │  Server          │  Dell PowerEdge R630                                 │
 │  AI              │  NVIDIA DGX Spark                                    │
-│  SBCs            │  Raspberry Pi 5  ·  Raspberry Pi 4                  │
+│  SBCs            │  Raspberry Pi 5  ·  Raspberry Pi 4                   │
 │  Edge            │  DigitalOcean droplet                                │
-└──────────────────┴─────────────────────────────────────────────────────┘
+└──────────────────┴──────────────────────────────────────────────────────┘
 ```
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
