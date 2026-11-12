@@ -13,7 +13,6 @@ github:
     - GSD-OC
     - lumos
     - memory-spark
-    - mission-control
 
   # "Recently Active" table settings.
   recent_count: 5
