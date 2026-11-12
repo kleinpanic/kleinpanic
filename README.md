@@ -53,19 +53,19 @@
 ## Setup
 
 ```
-┌──────────────────┬─────────────────────────────────────────────────────┐
-│  OS              │  Debian 13 (Trixie)  ·  Arch Linux                  │
+┌──────────────────┬──────────────────────────────────────────────────────┐
+│  OS              │  Debian 13 (Trixie)  ·  Arch Linux                   │
 │  WM              │  DWM                                                 │
 │  Editor          │  Neovim                                              │
 │  Shell           │  Zsh                                                 │
 │  Terminal        │  st                                                  │
-├──────────────────┼─────────────────────────────────────────────────────┤
-│  Workstations    │  Dell Inspiron (x2)  ·  MacBook Pro                 │
+├──────────────────┼──────────────────────────────────────────────────────┤
+│  Workstations    │  Dell Inspiron (x2)  ·  MacBook Pro                  │
 │  Server          │  Dell PowerEdge R630                                 │
 │  AI              │  NVIDIA DGX Spark                                    │
-│  SBCs            │  Raspberry Pi 5  ·  Raspberry Pi 4                  │
+│  SBCs            │  Raspberry Pi 5  ·  Raspberry Pi 4                   │
 │  Edge            │  DigitalOcean droplet                                │
-└──────────────────┴─────────────────────────────────────────────────────┘
+└──────────────────┴──────────────────────────────────────────────────────┘
 ```
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -97,11 +97,12 @@ curl https://kleinpanic.com/ip     # check your public IP
 
 | Repo | About | Lang | ★ |
 | --- | --- | --- | --- |
-| [fblogin](https://github.com/kleinpanic/fblogin) | fblogin is a lightweight, framebuffer-based login manager for Debian. It replaces tty1 with a… | C | 2 |
-| [toralizer](https://github.com/kleinpanic/toralizer) | Toralizer is a small, LD_PRELOAD-based tool that intercepts a program’s outgoing network conne… | C | 1 |
-| [GSD-OC](https://github.com/kleinpanic/GSD-OC) | GSD lifecycle orchestration as a native OpenClaw plugin — enforced research→plan→execute→verif… | TypeSc | 1 |
-| [lumos](https://github.com/kleinpanic/lumos) | Lumos—cross-platform CLI for backlight brightness control. Supports internal panels via sysfs… | C | 1 |
-| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings. Sel… | TypeSc | 1 |
+| [fblogin](https://github.com/kleinpanic/fblogin) | fblogin is a lightweight, framebuffer-based login manager for Debian. It replaces tty1 with… | C | 2 |
+| [toralizer](https://github.com/kleinpanic/toralizer) | Toralizer is a small, LD_PRELOAD-based tool that intercepts a program’s outgoing network… | C | 1 |
+| [GSD-OC](https://github.com/kleinpanic/GSD-OC) | GSD lifecycle orchestration as a native OpenClaw plugin — enforced… | TypeScript | 1 |
+| [lumos](https://github.com/kleinpanic/lumos) | Lumos—cross-platform CLI for backlight brightness control. Supports internal panels via… | C | 1 |
+| [memory-spark](https://github.com/kleinpanic/memory-spark) | 15-stage RAG pipeline with dynamic reranker gating, RRF fusion, and asymmetric embeddings.… | TypeScript | 1 |
+| [ghost-pipeline](https://github.com/kleinpanic/ghost-pipeline) | iMessage drafting agent — drafts replies in Klein's voice, sends only after an owner approval | JavaScript | 0 |
 
 Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpanic?tab=repositories) · retired work: [Archived](https://github.com/kleinpanic/Archived)
 
@@ -111,11 +112,11 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 | Repo | About | Last push |
 | --- | --- | --- |
+| [xcode-mcp-suite](https://github.com/kleinpanic/xcode-mcp-suite) | SDK, CLI, and MCP proxy for Xcode's agentic coding bridge (xcrun mcpbridge) — Xcode 26.3+ | 2026-11-12 |
 | [battery-watcher](https://github.com/kleinpanic/battery-watcher) | Lightweight C daemon for battery threshold notifications | 2026-11-12 |
 | [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-11-12 |
 | [fdm-material-atlas](https://github.com/kleinpanic/fdm-material-atlas) | Interactive FDM/FFF material selector and technical reference atlas | 2026-11-09 |
-| [datahall](https://github.com/kleinpanic/datahall) | An interactive educational museum of database internals — storage engines, concurrency, i… | 2026-11-06 |
-| [ghost-pipeline](https://github.com/kleinpanic/ghost-pipeline) | — | 2026-11-04 |
+| [datahall](https://github.com/kleinpanic/datahall) | An interactive educational museum of database internals — storage engines, concurrency… | 2026-11-06 |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -145,10 +146,6 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 | --- | --- |
 | [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 47 |
 
-
-
-
-
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## Currently
@@ -159,11 +156,7 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-
-
 ## Things I've built that I actually use
-
-
 
 <details>
 <summary><kbd>toralizer</kbd> — transparent Tor proxy for any program</summary>
