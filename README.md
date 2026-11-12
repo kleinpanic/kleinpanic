@@ -34,7 +34,7 @@
 
 <pre>
 ┌─ kleinpanic ─────────────────────────────────────────┐
-│  64 repos  ·  11 followers  ·  22★  ·  2 forks       │
+│  64 repos  ·  10 followers  ·  22★  ·  2 forks       │
 └──────────────────────────────────────────────────────┘
 </pre>
 </div>
@@ -111,11 +111,11 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 | Repo | About | Last push |
 | --- | --- | --- |
+| [battery-watcher](https://github.com/kleinpanic/battery-watcher) | Lightweight C daemon for battery threshold notifications | 2026-11-12 |
+| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-11-12 |
 | [fdm-material-atlas](https://github.com/kleinpanic/fdm-material-atlas) | Interactive FDM/FFF material selector and technical reference atlas | 2026-11-09 |
-| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-11-08 |
 | [datahall](https://github.com/kleinpanic/datahall) | An interactive educational museum of database internals — storage engines, concurrency, i… | 2026-11-06 |
 | [ghost-pipeline](https://github.com/kleinpanic/ghost-pipeline) | — | 2026-11-04 |
-| [oc-config-gate](https://github.com/kleinpanic/oc-config-gate) | OpenClaw config approval gate with native Discord buttons, validation, blessing, audit, a… | 2026-11-02 |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -134,8 +134,8 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 
 | Model | Downloads | Likes |
 | --- | --- | --- |
-| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 11 | 1 |
-| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 14 | 1 |
+| [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 14 | 1 |
+| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 12 | 1 |
 | [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 7 | 0 |
 | [canvas-calendar-agent-v7-dpo-gguf](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo-gguf) | 0 | 0 |
 
@@ -143,7 +143,7 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 
 | Dataset | Downloads |
 | --- | --- |
-| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 46 |
+| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 47 |
 
 
 
@@ -258,7 +258,7 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<p align="center"><sub>Last refreshed 2026-11-09 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
+<p align="center"><sub>Last refreshed 2026-11-12 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=80&section=footer" />
