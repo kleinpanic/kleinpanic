@@ -34,7 +34,7 @@
 
 <pre>
 ┌─ kleinpanic ─────────────────────────────────────────┐
-│  64 repos  ·  10 followers  ·  22★  ·  2 forks       │
+│  64 repos  ·  11 followers  ·  24★  ·  2 forks       │
 └──────────────────────────────────────────────────────┘
 </pre>
 </div>
@@ -112,11 +112,11 @@ Full index: [github.com/kleinpanic?tab=repositories](https://github.com/kleinpan
 
 | Repo | About | Last push |
 | --- | --- | --- |
-| [battery-watcher](https://github.com/kleinpanic/battery-watcher) | Lightweight C daemon for battery threshold notifications | 2026-11-15 |
-| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-11-15 |
-| [fdm-material-atlas](https://github.com/kleinpanic/fdm-material-atlas) | Interactive FDM/FFF material selector and technical reference atlas | 2026-11-14 |
-| [datahall](https://github.com/kleinpanic/datahall) | An interactive educational museum of database internals — storage engines, concurrency… | 2026-11-14 |
-| [alarm-pi](https://github.com/kleinpanic/alarm-pi) | Headless Raspberry Pi alarm clock with a CLI and a Tailwind LAN web UI (live… | 2026-11-14 |
+| [CS3704-Canvas-Project](https://github.com/kleinpanic/CS3704-Canvas-Project) | CS3704 Canvas Project - team-maintained Canvas TUI and shared-core architecture repo | 2026-11-22 |
+| [battery-watcher](https://github.com/kleinpanic/battery-watcher) | Lightweight C daemon for battery threshold notifications | 2026-11-19 |
+| [oc-config-gate](https://github.com/kleinpanic/oc-config-gate) | OpenClaw config approval gate with native Discord buttons, validation, blessing, audit… | 2026-11-19 |
+| [CERAS](https://github.com/kleinpanic/CERAS) | CERAS is a Linux screen recorder that captures video and audio using X11, ALSA, and… | 2026-11-19 |
+| [bat0daemon](https://github.com/kleinpanic/bat0daemon) | See the repository README for details | 2026-11-19 |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -136,15 +136,15 @@ Everything under [huggingface.co/kleinpanic93](https://huggingface.co/kleinpanic
 | Model | Downloads | Likes |
 | --- | --- | --- |
 | [Nemotron-Terminal-32B-NVFP4](https://huggingface.co/kleinpanic93/Nemotron-Terminal-32B-NVFP4) | 11 | 1 |
-| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 14 | 1 |
-| [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 10 | 0 |
+| [Qwen3-Coder-30B-A3B-Instruct-NVFP4](https://huggingface.co/kleinpanic93/Qwen3-Coder-30B-A3B-Instruct-NVFP4) | 22 | 1 |
+| [canvas-calendar-agent-v7-dpo](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo) | 14 | 0 |
 | [canvas-calendar-agent-v7-dpo-gguf](https://huggingface.co/kleinpanic93/canvas-calendar-agent-v7-dpo-gguf) | 0 | 0 |
 
 **Datasets**
 
 | Dataset | Downloads |
 | --- | --- |
-| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 49 |
+| [canvas-calendar-preferences-v7](https://huggingface.co/datasets/kleinpanic93/canvas-calendar-preferences-v7) | 18 |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -251,7 +251,7 @@ Everything I run, I run myself. Public endpoints:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<p align="center"><sub>Last refreshed 2026-11-16 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
+<p align="center"><sub>Last refreshed 2026-11-23 · generated from <a href="profile.yml">profile.yml</a> + live GitHub / Hugging Face data by <a href="scripts/generate_readme.py">scripts/generate_readme.py</a></sub></p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=EA24F7&height=80&section=footer" />
